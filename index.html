@@ -398,9 +398,11 @@ function submitForm(){
   var btn=document.getElementById('submit-btn');
   btn.textContent=currentLang==='tr'?'Gönderiliyor...':'Sending...';
   btn.disabled=true;
-  var fd=new FormData();fd.append('name',n);fd.append('company',c);fd.append('phone',p);fd.append('email',e);
-  fetch('https://script.google.com/macros/s/AKfycby1rzU_CntUs8x3GsG5JeHjfEFVPk427_eDf-KI4qfWl4x8VJvrcZ10UByPVZ-5h8Rt/exec',{method:'POST',body:fd})
-  .then(function(){done(btn);}).catch(function(){done(btn);});
+  fetch('https://vpasdolhfnhrclxjygzc.supabase.co/functions/v1/submit-pilot-request',{
+    method:'POST',
+    headers:{'Content-Type':'application/json','apikey':'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZwYXNkb2xoZm5ocmNseGp5Z3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc2MTEzMDksImV4cCI6MjA5MzE4NzMwOX0.PAr13ATUCIqu34phSQla5k_rIUvbJTwhvKKfjxAEM8Q'},
+    body:JSON.stringify({name:n,company:c,phone:p,email:e,language:currentLang})
+  }).then(function(r){return r.json();}).then(function(j){if(j&&j.success){done(btn);}else{btn.textContent=currentLang==='tr'?'Hata, tekrar deneyin':'Error, try again';btn.disabled=false;}}).catch(function(){btn.textContent=currentLang==='tr'?'Hata, tekrar deneyin':'Error, try again';btn.disabled=false;});
 }
 function done(btn){
   document.getElementById('success-msg').style.display='block';
