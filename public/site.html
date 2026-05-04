@@ -400,9 +400,19 @@ function submitForm(){
   var btn=document.getElementById('submit-btn');
   btn.textContent=currentLang==='tr'?'Gönderiliyor...':'Sending...';
   btn.disabled=true;
-  var fd=new FormData();fd.append('name',n);fd.append('company',c);fd.append('phone',p);fd.append('email',e);
-  fetch('https://script.google.com/macros/s/AKfycby1rzU_CntUs8x3GsG5JeHjfEFVPk427_eDf-KI4qfWl4x8VJvrcZ10UByPVZ-5h8Rt/exec',{method:'POST',body:fd})
-  .then(function(){done(btn);}).catch(function(){done(btn);});
+  fetch('https://formspree.io/f/mykokjya',{
+    method:'POST',
+    headers:{'Content-Type':'application/json','Accept':'application/json'},
+    body:JSON.stringify({name:n,company:c,phone:p,email:e,_subject:'toola.co — Yeni Pilot Talebi: '+c})
+  })
+  .then(function(r){
+    if(r.ok){done(btn);}
+    else{btn.textContent=currentLang==='tr'?'Hata, tekrar deneyin':'Error, try again';btn.disabled=false;}
+  })
+  .catch(function(){
+    btn.textContent=currentLang==='tr'?'Hata, tekrar deneyin':'Error, try again';
+    btn.disabled=false;
+  });
 }
 function done(btn){
   document.getElementById('success-msg').style.display='block';
