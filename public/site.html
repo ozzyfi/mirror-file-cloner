@@ -4,16 +4,16 @@
 <meta charset="UTF-8">
 <link rel="icon" type="image/png" href="/favicon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ToolA — Sahanın Hafızası</title>
-<meta name="description" content="Teknisyeninize kendi dokümanlarınızdan, kendi dilinde, 60 saniyede kaynak referanslı cevap verir. Çevrimdışı çalışır. Her işlemde öğrenir.">
-<meta property="og:title" content="ToolA — Sahanın Hafızası">
-<meta property="og:description" content="Teknisyeninize 60 saniyede kaynak referanslı cevap. Çevrimdışı çalışır. Her işlemde öğrenir.">
+<title>ToolA — Sahanın hafızası. Arızadan kanıtlı kapanışa.</title>
+<meta name="description" content="ToolA, saha teknisyenlerinin arızaları daha hızlı teşhis etmesini, kanıt toplamasını ve her kapanışı tekrar kullanılabilir şirket hafızasına dönüştürmesini sağlar.">
+<meta property="og:title" content="ToolA — Sahanın hafızası. Arızadan kanıtlı kapanışa.">
+<meta property="og:description" content="Saha ekipleri için AI iş bitirme asistanı. Kaynaklı cevap, offline çalışma, usta hafızası.">
 <meta property="og:image" content="https://toola.co/og-image.png">
 <meta property="og:url" content="https://toola.co">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="ToolA — Sahanın Hafızası">
-<meta name="twitter:description" content="Teknisyeninize 60 saniyede kaynak referanslı cevap. Çevrimdışı çalışır. Her işlemde öğrenir.">
+<meta name="twitter:title" content="ToolA — Sahanın hafızası. Arızadan kanıtlı kapanışa.">
+<meta name="twitter:description" content="Saha ekipleri için AI iş bitirme asistanı. Kaynaklı cevap, offline çalışma, usta hafızası.">
 <meta name="twitter:image" content="https://toola.co/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Space+Mono:wght@400;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
@@ -118,6 +118,41 @@ footer{padding:2.5rem 0;border-top:1px solid var(--line)}
 .fr svg{display:block}
 footer a{color:var(--slate);text-decoration:none;transition:color .2s}footer a:hover{color:var(--orange)}
 
+/* HERO badge/eyebrow */
+.hero-badge{display:inline-block;font-family:var(--fm);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);padding:.4rem .9rem;border:1px solid rgba(232,96,28,.2);border-radius:99px;margin-bottom:1.25rem;animation:fu .7s ease both}
+.hero-eyebrow{font-family:var(--fd);font-size:clamp(2rem,4vw,3rem);line-height:1.05;letter-spacing:-.02em;color:var(--slate);font-style:italic;margin-bottom:.4rem;animation:fu .7s ease .04s both}
+.hero-support{font-size:1rem;color:var(--slate);max-width:560px;margin:1rem auto 0;line-height:1.7;opacity:.85;animation:fu .7s ease .2s both}
+.bs{background:transparent;color:var(--ink);padding:.9rem 1.8rem;border-radius:7px;text-decoration:none;font-weight:600;font-size:.95rem;border:1.5px solid var(--line);display:inline-block;transition:all .25s}
+.bs:hover{border-color:var(--ink)}
+
+/* PROBLEM grid */
+.prob-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2rem}
+.prob-card{padding:1.5rem;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+.prob-card h3{font-size:1.05rem;font-weight:700;margin-bottom:.4rem}
+.prob-card p{font-size:.92rem;color:var(--slate);line-height:1.6}
+@media(max-width:600px){.prob-grid{grid-template-columns:1fr}}
+
+/* SOLUTION 3 cols */
+.sol-grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:1.75rem}
+@media(max-width:960px){.sol-grid-3{grid-template-columns:1fr}}
+
+/* HOW */
+.how-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;margin-top:2rem}
+.how-step{padding:1.5rem;border:1px solid var(--line);border-radius:12px;background:var(--card);position:relative}
+.how-num{font-family:var(--fm);font-size:.8rem;font-weight:700;color:var(--orange);letter-spacing:.08em;margin-bottom:.5rem}
+.how-step h3{font-size:1rem;font-weight:700;margin-bottom:.35rem}
+.how-step p{font-size:.88rem;color:var(--slate);line-height:1.55}
+@media(max-width:960px){.how-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.how-grid{grid-template-columns:1fr}}
+
+/* CAP 3 cols */
+.cap-grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2rem}
+@media(max-width:960px){.cap-grid-3{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.cap-grid-3{grid-template-columns:1fr}}
+
+/* PROOF sectors */
+.proof-sectors{margin-top:1.25rem;text-align:center;font-size:.9rem;color:var(--slate);font-family:var(--fm);letter-spacing:.02em}
+
 /* RESPONSIVE */
 @media(max-width:960px){
   .sol-grid,.cap-grid{grid-template-columns:1fr}
@@ -159,16 +194,26 @@ footer a{color:var(--slate);text-decoration:none;transition:color .2s}footer a:h
 
 <nav><div class="ni">
   <a class="logo" href="#"><img src="/toola-logo.png" alt="ToolA"/></a>
-  <ul><li><button class="lang-btn" onclick="toggleLang()">EN</button></li><li><a href="javascript:void(0)" onclick="openModal()" class="ncta" data-i18n="nav-cta">Pilot Başlat</a></li></ul>
+  <ul>
+    <li><a href="#product" data-i18n="nav-product" style="color:var(--ink);text-decoration:none;font-size:.95rem;font-weight:500;opacity:.75">Ürün</a></li>
+    <li><a href="#how" data-i18n="nav-how" style="color:var(--ink);text-decoration:none;font-size:.95rem;font-weight:500;opacity:.75">Nasıl Çalışır</a></li>
+    <li><a href="#security" data-i18n="nav-sec" style="color:var(--ink);text-decoration:none;font-size:.95rem;font-weight:500;opacity:.75">Güvenlik</a></li>
+    <li><button class="lang-btn" onclick="toggleLang()">EN</button></li>
+    <li><a href="javascript:void(0)" onclick="openModal()" class="ncta" data-i18n="nav-cta">Pilot Başlat</a></li>
+  </ul>
 </div></nav>
 
 <!-- 1. HERO -->
 <section class="hero">
   <div class="hero-inner">
-    <h1 data-i18n="hero-title">Sahanın <em>hafızası.</em></h1>
-    <p class="hero-sub" data-i18n="hero-sub">Teknisyeninize kendi dokümanlarınızdan, kendi dilinde, 60 saniyede kaynak referanslı cevap verir. Çevrimdışı çalışır. Her işlemde öğrenir.</p>
+    <div class="hero-badge" data-i18n="hero-badge">Saha ekipleri için AI iş bitirme asistanı</div>
+    <div class="hero-eyebrow" data-i18n="hero-eyebrow">Sahanın hafızası.</div>
+    <h1 data-i18n="hero-title">Arızadan <em>kanıtlı kapanışa.</em></h1>
+    <p class="hero-sub" data-i18n="hero-sub">ToolA, saha teknisyenlerinin arızaları daha hızlı teşhis etmesini, fotoğraf/ses/ölçüm gibi kanıtları toplamasını ve her kapanışı tekrar kullanılabilir şirket hafızasına dönüştürmesini sağlar.</p>
+    <p class="hero-support" data-i18n="hero-support">Kendi dokümanlarınızdan kaynak referanslı cevap verir, offline çalışır ve usta bilgisini her işten öğrenerek kurumsal hafızaya işler.</p>
     <div class="hero-actions">
       <a href="javascript:void(0)" onclick="openModal()" class="bp" data-i18n="hero-btn">6 Haftalık Pilot Başlat →</a>
+      <a href="#how" class="bs" data-i18n="hero-btn2">Pilot Akışını Gör</a>
     </div>
   </div>
 </section>
@@ -177,72 +222,114 @@ footer a{color:var(--slate);text-decoration:none;transition:color .2s}footer a:h
 <div class="proof">
   <div class="w">
     <div class="proof-metrics">
-      <div class="pm"><div class="n">&lt;60s</div><div class="t" data-i18n="pm-t-1">Belge Arama Süresi</div><div class="d" data-i18n="pm-d-1">Eskiden 15–20 dakika</div></div>
+      <div class="pm"><div class="n">&lt;60s</div><div class="t" data-i18n="pm-t-1">Kaynaklı Cevap Süresi</div><div class="d" data-i18n="pm-d-1">Eskiden 15–20 dakika doküman arama</div></div>
       <div class="pm"><div class="n" data-i18n="pm-n-2">%30–50</div><div class="t" data-i18n="pm-t-2">Duruş Süresi Azalması</div><div class="d" data-i18n="pm-d-2">Daha hızlı teşhis, daha az tekrar</div></div>
-      <div class="pm"><div class="n" data-i18n="pm-n-3">−%40</div><div class="t" data-i18n="pm-t-3">Gereksiz Parça Değişimi</div><div class="d" data-i18n="pm-d-3">Doğru teşhis, doğru parça</div></div>
+      <div class="pm"><div class="n" data-i18n="pm-n-3">−%40</div><div class="t" data-i18n="pm-t-3">Gereksiz Parça Değişimi</div><div class="d" data-i18n="pm-d-3">Kanıta dayalı teşhis, doğru müdahale</div></div>
     </div>
     <div class="proof-logos">
       <span>İTÜ Çekirdek</span>
       <span>EIT Digital</span>
-      <span>Havelsan Jet Cube</span>
+      <span>HAVELSAN JetCube</span>
+      <span>QSTP Incubation</span>
     </div>
+    <div class="proof-sectors" data-i18n="proof-sectors">Görüşme / pilot süreci yürütülen sektörler: Enerji · Ulaşım · Sağlık · Endüstri · Denizcilik</div>
   </div>
 </div>
 
 <!-- 3. PROBLEM -->
 <section id="problem"><div class="w">
   <h2 class="st" data-i18n="prob-title">Usta gider, <em>bilgisi de gider.</em></h2>
-  <p class="problem-text" data-i18n="prob-text">Endüstriyel bakımda deneyimli ustalar emekli oldukça onlarca yıllık bilgi kurumdan ayrılıyor. Her yanlış teşhis, gereksiz parça ve ikinci servis çağrısı gerçek para. Ekipmanlar karmaşıklaşıyor ama bilen insan azalıyor.</p>
+  <p class="problem-text" data-i18n="prob-text">En iyi teknisyenler çoğu zaman cevabı dokümanda aramaz. Sesi, titreşimi, kokuyu, ekipmanın geçmişini ve daha önce neyin işe yaradığını bilir.</p>
+  <p class="problem-text" data-i18n="prob-text2">Ama bu bilgi çoğu zaman ERP'de, iş emrinde veya dokümanda yaşamaz. Usta emekli olduğunda ya da ekip değiştiğinde kurum aynı arızayı yeniden öğrenmek zorunda kalır.</p>
+  <div class="prob-grid">
+    <div class="prob-card"><h3 data-i18n="prob-c1-h">Bilgi dağınık</h3><p data-i18n="prob-c1-p">Dokümanlar, iş emirleri, WhatsApp mesajları ve teknisyen notları farklı yerlerde kalır.</p></div>
+    <div class="prob-card"><h3 data-i18n="prob-c2-h">Kapanışlar eksik</h3><p data-i18n="prob-c2-p">İş kapansa bile kök neden, kanıt, yapılan işlem ve sonuç çoğu zaman net kaydedilmez.</p></div>
+    <div class="prob-card"><h3 data-i18n="prob-c3-h">Usta bilgisi kaybolur</h3><p data-i18n="prob-c3-p">Tecrübeli teknisyenin bildiği pratik çözüm şirket hafızasına dönüşmez.</p></div>
+    <div class="prob-card"><h3 data-i18n="prob-c4-h">Aynı arıza tekrar öğrenilir</h3><p data-i18n="prob-c4-p">Benzer arızalar her seferinde sıfırdan araştırılır, zaman ve parça maliyeti artar.</p></div>
+  </div>
 </div></section>
 
 <!-- 4. ÇÖZÜM (KOYU) -->
 <section class="ins" id="solution"><div class="w">
-  <h2 class="st" data-i18n="sol-title">Dokümanlarınız ve saha deneyiminiz <em>tek bir zekada</em> birleşir.</h2>
-  <p class="sd" data-i18n="sol-desc">ToolA, teknik dokümanlarınızı saha verinizle birleştirerek sürekli öğrenen bir bilgi tabanı oluşturur. Yeni teknisyen, en deneyimli ustanın bilgisiyle başlar.</p>
-  <div class="sol-grid">
+  <h2 class="st" data-i18n="sol-title">Usta çözer. <em>ToolA öğrenir.</em></h2>
+  <p class="sd" data-i18n="sol-desc">Tecrübeli teknisyen arızayı dokümana bakmadan çözebilir. ToolA, bu çözümü sesli notlardan, fotoğraflardan, ölçümlerden ve kapanış kayıtlarından yakalar. Belirtiyi, kök nedeni, yapılan müdahaleyi, kullanılan parçayı ve sonucu yapılandırarak şirket hafızasına dönüştürür.</p>
+  <div class="sol-result">
+    <h4 data-i18n="sol-highlight">Bugün en iyi ustanızın bildiği şey, yarın her teknisyenin cebinde olur.</h4>
+  </div>
+  <h3 class="st" style="font-size:clamp(1.5rem,2.8vw,2.2rem);margin-top:3rem;color:#F7F5F0" data-i18n="mem-title">Doküman, saha kanıtı ve usta deneyimi <em>tek hafızada</em> birleşir.</h3>
+  <p class="sd" data-i18n="mem-sub">ToolA sadece teknik dokümanlardan cevap vermez. Sahadan gelen kanıtları, iş kapanışlarını ve uzman teknisyen bilgisini aynı operasyon hafızasında birleştirir.</p>
+  <div class="sol-grid-3">
     <div class="sol-card left">
-      <h4 data-i18n="sol-h-left">Teknik Dokümanlar</h4>
+      <h4 data-i18n="sol-h-1">Teknik Dokümanlar</h4>
       <ul>
-        <li data-i18n="sol-li-1">OEM kılavuzları ve servis prosedürleri</li>
-        <li data-i18n="sol-li-2">Parça katalogları ve garanti tabloları</li>
-        <li data-i18n="sol-li-3">Güvenlik standartları ve HSE prosedürleri</li>
+        <li data-i18n="sol-li-1">OEM kılavuzları</li>
+        <li data-i18n="sol-li-2">Servis prosedürleri</li>
+        <li data-i18n="sol-li-3">Parça katalogları</li>
+        <li data-i18n="sol-li-4">HSE ve güvenlik dokümanları</li>
+      </ul>
+    </div>
+    <div class="sol-card left">
+      <h4 data-i18n="sol-h-2">Saha Kanıtı</h4>
+      <ul>
+        <li data-i18n="sol-li-5">Fotoğraf ve video</li>
+        <li data-i18n="sol-li-6">Ses kaydı</li>
+        <li data-i18n="sol-li-7">Hata kodu</li>
+        <li data-i18n="sol-li-8">Ölçüm ve sensör verisi</li>
+        <li data-i18n="sol-li-9">Ekipman etiketi / seri no</li>
       </ul>
     </div>
     <div class="sol-card right">
-      <h4 data-i18n="sol-h-right">Saha Deneyimi</h4>
+      <h4 data-i18n="sol-h-3">Usta Deneyimi</h4>
       <ul>
-        <li data-i18n="sol-li-4">Geçmiş iş emirleri ve çözüm kayıtları</li>
-        <li data-i18n="sol-li-5">Teknisyen notları ve saha gözlemleri</li>
-        <li data-i18n="sol-li-6">Sensör verileri ve makine durumu</li>
+        <li data-i18n="sol-li-10">Geçmiş çözümler</li>
+        <li data-i18n="sol-li-11">Kapanış notları</li>
+        <li data-i18n="sol-li-12">Yanlış teşhisler</li>
+        <li data-i18n="sol-li-13">Kök nedenler</li>
+        <li data-i18n="sol-li-14">Tekrar eden arıza örüntüleri</li>
       </ul>
     </div>
   </div>
-  <div class="sol-result">
-    <h4 data-i18n="sol-result-h">Sürekli öğrenen, kendini güncelleyen bilgi tabanı</h4>
-    <p data-i18n="sol-result-p">Her yeni vakadan öğrenir · Kaynak referansıyla cevap verir · Kurumsal hafıza büyür</p>
+</div></section>
+
+<!-- 5. NASIL ÇALIŞIR -->
+<section id="how"><div class="w">
+  <h2 class="st" data-i18n="how-title">Arızadan kanıtlı kapanışa, <em>tek akış.</em></h2>
+  <div class="how-grid">
+    <div class="how-step"><div class="how-num">01</div><h3 data-i18n="how-h-1">Arıza gelir</h3><p data-i18n="how-p-1">WhatsApp, mobil uygulama, ERP veya çağrı merkezinden iş düşer.</p></div>
+    <div class="how-step"><div class="how-num">02</div><h3 data-i18n="how-h-2">Kanıt toplanır</h3><p data-i18n="how-p-2">Teknisyen fotoğraf, sesli not, hata kodu, ölçüm veya kısa gözlem ekler.</p></div>
+    <div class="how-step"><div class="how-num">03</div><h3 data-i18n="how-h-3">ToolA teşhis önerir</h3><p data-i18n="how-p-3">Dokümanlar, geçmiş iş emirleri ve benzer saha vakalarından kaynaklı cevap verir.</p></div>
+    <div class="how-step"><div class="how-num">04</div><h3 data-i18n="how-h-4">Teknisyen müdahale eder</h3><p data-i18n="how-p-4">Yapılan işlem, kullanılan parça ve sonuç kayıt altına alınır.</p></div>
+    <div class="how-step"><div class="how-num">05</div><h3 data-i18n="how-h-5">Kapanış hafızaya dönüşür</h3><p data-i18n="how-p-5">Belirti, kök neden, çözüm ve kanıtlar bir sonraki vaka için kullanılabilir hale gelir.</p></div>
   </div>
 </div></section>
 
-<!-- 5. YETENEKLER -->
-<section id="capabilities"><div class="w">
-  <h2 class="st" data-i18n="cap-title">Arızadan çözüme, <em>tek akış.</em></h2>
-  <p class="sd" data-i18n="cap-desc">İlk alarmdan kurumsal hafızaya kadar kesintisiz bir döngü.</p>
-  <div class="cap-grid">
+<!-- 6. YETENEKLER -->
+<section id="capabilities" class="product-section"><a id="product"></a><div class="w">
+  <h2 class="st" data-i18n="cap-title">Sahada işi bitiren <em>AI akışı.</em></h2>
+  <div class="cap-grid-3">
     <div class="cap-card">
-      <div class="cap-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E8601C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
-      <div class="cap-content"><h3 data-i18n="cap-h-1">60 Saniyede Teşhis</h3><p data-i18n="cap-p-1">Sesli veya yazılı soru, kaynak referanslı cevap. Tamamen çevrimdışı çalışır.</p></div>
+      <div class="cap-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E8601C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></div>
+      <div class="cap-content"><h3 data-i18n="cap-h-1">Kaynaklı Teşhis</h3><p data-i18n="cap-p-1">Dokümanlar, geçmiş vakalar ve saha kanıtlarından kaynak referanslı öneriler verir.</p></div>
     </div>
     <div class="cap-card">
-      <div class="cap-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E8601C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
-      <div class="cap-content"><h3 data-i18n="cap-h-2">Otomatik Belgeleme</h3><p data-i18n="cap-p-2">Teknisyen konuşur, sistem iş emrini yazar. SAP ve Maximo'ya otomatik aktarım. Sıfır evrak.</p></div>
+      <div class="cap-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E8601C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="13" r="3"/><path d="M9 3v2h6V3"/></svg></div>
+      <div class="cap-content"><h3 data-i18n="cap-h-2">Kanıt Yakalama</h3><p data-i18n="cap-p-2">Fotoğraf, ses, hata kodu, ölçüm ve gözlemler otomatik olarak iş kaydına bağlanır.</p></div>
     </div>
     <div class="cap-card">
-      <div class="cap-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E8601C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
-      <div class="cap-content"><h3 data-i18n="cap-h-3">Öğrenen Bilgi Tabanı</h3><p data-i18n="cap-p-3">Her kapanan iş emri sistemi daha akıllı yapar. Kurumsal hafıza büyümeye devam eder.</p></div>
+      <div class="cap-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E8601C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+      <div class="cap-content"><h3 data-i18n="cap-h-3">Akıllı Kapanış</h3><p data-i18n="cap-p-3">Teknisyen konuşur; ToolA belirti, neden, çözüm, parça ve sonucu kapanış kaydına dönüştürür.</p></div>
     </div>
     <div class="cap-card">
-      <div class="cap-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E8601C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
-      <div class="cap-content"><h3 data-i18n="cap-h-4">Kestirimci Bakım</h3><p data-i18n="cap-p-4">Arıza örüntülerini analiz eder, bir sonraki arızayı gerçekleşmeden önce öngörür.</p></div>
+      <div class="cap-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E8601C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+      <div class="cap-content"><h3 data-i18n="cap-h-4">Usta Hafızası</h3><p data-i18n="cap-p-4">Uzman teknisyenlerin onayladığı çözümler şirket hafızasına eklenir.</p></div>
+    </div>
+    <div class="cap-card">
+      <div class="cap-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E8601C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1l22 22"/><path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55"/><path d="M5 12.55a10.94 10.94 0 0 1 5.17-2.39"/><path d="M10.71 5.05A16 16 0 0 1 22.58 9"/><path d="M1.42 9a15.91 15.91 0 0 1 4.7-2.88"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg></div>
+      <div class="cap-content"><h3 data-i18n="cap-h-5">Offline Çalışma</h3><p data-i18n="cap-p-5">Saha, tesis ve yüksek güvenlikli ortamlarda internet olmadan çalışabilir.</p></div>
+    </div>
+    <div class="cap-card">
+      <div class="cap-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E8601C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg></div>
+      <div class="cap-content"><h3 data-i18n="cap-h-6">ERP Entegrasyonu</h3><p data-i18n="cap-p-6">SAP, Maximo veya mevcut iş emri sistemlerine kapanış ve aksiyon bilgisi aktarır.</p></div>
     </div>
   </div>
 </div></section>
@@ -250,23 +337,26 @@ footer a{color:var(--slate);text-decoration:none;transition:color .2s}footer a:h
 <!-- 6. GÜVENLİK -->
 <section class="sec-strip" id="security"><div class="w">
   <h2 class="st" data-i18n="sec-title">Veriniz altyapınızdan <em>asla çıkmaz.</em></h2>
-  <p class="sd" data-i18n="sec-desc">Ulusal şebekeler, devlet demiryolları ve yüksek güvenlikli tesisler için tasarlandı.</p>
+  <p class="sd" data-i18n="sec-desc">ToolA; ulusal şebekeler, devlet kurumları, endüstriyel tesisler ve yüksek güvenlikli saha operasyonları için tasarlanır.</p>
   <div class="sec-grid">
     <div class="sec-card"><div class="sec-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F7F5F0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><h3 data-i18n="sec-h-1">Tam İzole Mimari</h3><p data-i18n="sec-p-1">Air-gapped ağlarda çalışır. Sıfır dış veri iletimi.</p></div>
     <div class="sec-card"><div class="sec-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F7F5F0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg></div><h3 data-i18n="sec-h-2">AES-256 & BYOK</h3><p data-i18n="sec-p-2">Kendi anahtarlarınızla tam kriptografik kontrol.</p></div>
-    <div class="sec-card"><div class="sec-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F7F5F0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><h3 data-i18n="sec-h-3">Kaynak Gösterimi</h3><p data-i18n="sec-p-3">Her yanıt kaynak sayfa ve dokümanı referans gösterir.</p></div>
-    <div class="sec-card"><div class="sec-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F7F5F0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><h3 data-i18n="sec-h-4">Hızlı Kurulum</h3><p data-i18n="sec-p-4">Veri taşıma gerektirmeden günler içinde devreye alınır.</p></div>
+    <div class="sec-card"><div class="sec-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F7F5F0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><h3 data-i18n="sec-h-3">Kaynak Gösterimi</h3><p data-i18n="sec-p-3">Her yanıt kaynak sayfa, doküman, geçmiş iş veya saha kanıtını referans gösterir.</p></div>
+    <div class="sec-card"><div class="sec-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F7F5F0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div><h3 data-i18n="sec-h-4">Denetlenebilir Hafıza</h3><p data-i18n="sec-p-4">Hangi veriden hangi cevap üretildiği ve hangi teknisyen tarafından onaylandığı kayıt altında kalır.</p></div>
   </div>
 </div></section>
 
 <!-- 7. CTA -->
 <section class="cta" id="pilot"><div class="w">
-  <h2 class="st" data-i18n="cta-title">Sahada <em>kanıtlayın.</em></h2>
-  <p class="sd" data-i18n="cta-desc">Çok yıllık kontrat istemiyoruz. Kendi teknisyenlerinizle test edin — ROI'yi kendiniz ölçün.</p>
+  <h2 class="st" data-i18n="cta-title">6 haftada gerçek sahada <em>kanıtlayın.</em></h2>
+  <p class="sd" data-i18n="cta-desc">Çok yıllık kontrat istemiyoruz. Bir ekip, birkaç senaryo ve kendi dokümanlarınızla ToolA'yı sahada test edin.</p>
+  <p class="sd" data-i18n="cta-desc2">Pilot sonunda doküman arama süresi, kapanış kalitesi, tekrar eden arızalar ve gereksiz müdahale riskini birlikte ölçelim.</p>
   <div class="cpills">
     <div class="cpill"><div class="pn">5–10</div><div class="pl" data-i18n="cta-pl-1">Teknisyen</div></div>
     <div class="cpill"><div class="pn">2–3</div><div class="pl" data-i18n="cta-pl-2">Bakım Senaryosu</div></div>
-    <div class="cpill"><div class="pn">6</div><div class="pl" data-i18n="cta-pl-3">Hafta</div></div>
+    <div class="cpill"><div class="pn">200–500</div><div class="pl" data-i18n="cta-pl-3">Sayfa Doküman</div></div>
+    <div class="cpill"><div class="pn">6</div><div class="pl" data-i18n="cta-pl-4">Hafta</div></div>
+    <div class="cpill"><div class="pn">1</div><div class="pl" data-i18n="cta-pl-5">Pilot Etki Raporu</div></div>
   </div>
   <a href="javascript:void(0)" onclick="openModal()" class="bp" data-i18n="cta-btn">6 Haftalık Pilot Başlat →</a>
 </div></section>
@@ -284,7 +374,7 @@ footer a{color:var(--slate);text-decoration:none;transition:color .2s}footer a:h
     <span style="opacity:.25;margin:0 .3rem">·</span>
     <a href="mailto:info@toola.net">info@toola.net</a>
     <span style="opacity:.25;margin:0 .3rem">·</span>
-    <span>Teknopark İstanbul, Pendik İstanbul</span>
+    <span>Teknopark İstanbul, Pendik / İstanbul</span>
   </div>
 </div></footer>
 
@@ -321,70 +411,109 @@ footer a{color:var(--slate);text-decoration:none;transition:color .2s}footer a:h
 var currentLang='tr';
 var T={
 'nav-cta':{tr:'Pilot Başlat',en:'Start Pilot'},
-'hero-title':{tr:'Sahanın <em>hafızası.</em>',en:'The memory of <em>the field.</em>'},
-'hero-sub':{tr:'Teknisyeninize kendi dokümanlarınızdan, kendi dilinde, 60 saniyede kaynak referanslı cevap verir. Çevrimdışı çalışır. Her işlemde öğrenir.',en:'Gives your technicians source-referenced answers from your own documentation, in their language, in 60 seconds. Works offline. Learns with every job.'},
+'nav-product':{tr:'Ürün',en:'Product'},
+'nav-how':{tr:'Nasıl Çalışır',en:'How It Works'},
+'nav-sec':{tr:'Güvenlik',en:'Security'},
+'hero-badge':{tr:'Saha ekipleri için AI iş bitirme asistanı',en:'AI field-work completion assistant for field teams'},
+'hero-eyebrow':{tr:'Sahanın hafızası.',en:'The memory of the field.'},
+'hero-title':{tr:'Arızadan <em>kanıtlı kapanışa.</em>',en:'From fault to <em>verified close.</em>'},
+'hero-sub':{tr:'ToolA, saha teknisyenlerinin arızaları daha hızlı teşhis etmesini, fotoğraf/ses/ölçüm gibi kanıtları toplamasını ve her kapanışı tekrar kullanılabilir şirket hafızasına dönüştürmesini sağlar.',en:'ToolA helps field technicians diagnose faults faster, capture photo/audio/measurement evidence, and turn every job closure into reusable company memory.'},
+'hero-support':{tr:'Kendi dokümanlarınızdan kaynak referanslı cevap verir, offline çalışır ve usta bilgisini her işten öğrenerek kurumsal hafızaya işler.',en:'Gives source-referenced answers from your own documents, works offline, and captures expert know-how from every job into operational memory.'},
 'hero-btn':{tr:'6 Haftalık Pilot Başlat →',en:'Start 6-Week Pilot →'},
-'pm-t-1':{tr:'Belge Arama Süresi',en:'Document Search Time'},
-'pm-d-1':{tr:'Eskiden 15–20 dakika',en:'Down from 15–20 minutes'},
+'hero-btn2':{tr:'Pilot Akışını Gör',en:'See Pilot Flow'},
+'pm-t-1':{tr:'Kaynaklı Cevap Süresi',en:'Time to Sourced Answer'},
+'pm-d-1':{tr:'Eskiden 15–20 dakika doküman arama',en:'Down from 15–20 min document search'},
 'pm-t-2':{tr:'Duruş Süresi Azalması',en:'Downtime Reduction'},
 'pm-d-2':{tr:'Daha hızlı teşhis, daha az tekrar',en:'Faster diagnosis, fewer repeat calls'},
 'pm-t-3':{tr:'Gereksiz Parça Değişimi',en:'Unnecessary Part Replacements'},
-'pm-d-3':{tr:'Doğru teşhis, doğru parça',en:'Right diagnosis, right parts'},
-'prob-tag':{tr:'Sorun',en:'Problem'},
+'pm-d-3':{tr:'Kanıta dayalı teşhis, doğru müdahale',en:'Evidence-based diagnosis, right intervention'},
+'proof-sectors':{tr:'Görüşme / pilot süreci yürütülen sektörler: Enerji · Ulaşım · Sağlık · Endüstri · Denizcilik',en:'Sectors in active discussions / pilots: Energy · Transportation · Healthcare · Industry · Maritime'},
 'prob-title':{tr:'Usta gider, <em>bilgisi de gider.</em>',en:'Experts leave. <em>Knowledge leaves too.</em>'},
-'prob-text':{tr:'Endüstriyel bakımda deneyimli ustalar emekli oldukça onlarca yıllık bilgi kurumdan ayrılıyor. Her yanlış teşhis, gereksiz parça ve ikinci servis çağrısı gerçek para. Ekipmanlar karmaşıklaşıyor ama bilen insan azalıyor.',en:'As experienced technicians retire, decades of knowledge walk out the door. Every misdiagnosis, unnecessary part, and repeat service call costs real money. Equipment grows more complex while skilled people grow scarcer.'},
-'sol-tag':{tr:'Çözüm',en:'Solution'},
-'sol-title':{tr:'Dokümanlarınız ve saha deneyiminiz <em>tek bir zekada</em> birleşir.',en:'Documentation meets field experience — <em>one intelligence.</em>'},
-'sol-desc':{tr:'ToolA, teknik dokümanlarınızı saha verinizle birleştirerek sürekli öğrenen bir bilgi tabanı oluşturur. Yeni teknisyen, en deneyimli ustanın bilgisiyle başlar.',en:'ToolA combines your technical documentation with field data to create a continuously learning knowledge base. New technicians start with your best expert\'s knowledge.'},
-'sol-h-left':{tr:'Teknik Dokümanlar',en:'Technical Documents'},
-'sol-li-1':{tr:'OEM kılavuzları ve servis prosedürleri',en:'OEM manuals and service procedures'},
-'sol-li-2':{tr:'Parça katalogları ve garanti tabloları',en:'Parts catalogs and warranty tables'},
-'sol-li-3':{tr:'Güvenlik standartları ve HSE prosedürleri',en:'Safety standards and HSE procedures'},
-'sol-h-right':{tr:'Saha Deneyimi',en:'Field Experience'},
-'sol-li-4':{tr:'Geçmiş iş emirleri ve çözüm kayıtları',en:'Historical work orders and resolution records'},
-'sol-li-5':{tr:'Teknisyen notları ve saha gözlemleri',en:'Technician notes and field observations'},
-'sol-li-6':{tr:'Sensör verileri ve makine durumu',en:'Sensor data and machine status'},
-'sol-result-h':{tr:'Sürekli öğrenen, kendini güncelleyen bilgi tabanı',en:'A continuously learning, self-updating knowledge base'},
-'sol-result-p':{tr:'Her yeni vakadan öğrenir · Kaynak referansıyla cevap verir · Kurumsal hafıza büyür',en:'Learns from every case · Answers with source references · Institutional memory grows'},
-'cap-tag':{tr:'Yetenekler',en:'Capabilities'},
-'cap-title':{tr:'Arızadan çözüme, <em>tek akış.</em>',en:'From fault to fix, <em>one flow.</em>'},
-'cap-desc':{tr:'İlk alarmdan kurumsal hafızaya kadar kesintisiz bir döngü.',en:'A seamless loop from first alert to institutional memory.'},
-'cap-h-1':{tr:'60 Saniyede Teşhis',en:'Diagnosis in 60 Seconds'},
-'cap-p-1':{tr:'Sesli veya yazılı soru, kaynak referanslı cevap. Tamamen çevrimdışı çalışır.',en:'Voice or text query, source-referenced answer. Fully offline.'},
-'cap-h-2':{tr:'Otomatik Belgeleme',en:'Automatic Documentation'},
-'cap-p-2':{tr:'Teknisyen konuşur, sistem iş emrini yazar. SAP ve Maximo\'ya otomatik aktarım. Sıfır evrak.',en:'Technician speaks, system writes the work order. Auto-syncs to SAP and Maximo. Zero paperwork.'},
-'cap-h-3':{tr:'Öğrenen Bilgi Tabanı',en:'Learning Knowledge Base'},
-'cap-p-3':{tr:'Her kapanan iş emri sistemi daha akıllı yapar. Kurumsal hafıza büyümeye devam eder.',en:'Every closed work order makes the system smarter. Institutional memory keeps growing.'},
-'cap-h-4':{tr:'Kestirimci Bakım',en:'Predictive Maintenance'},
-'cap-p-4':{tr:'Arıza örüntülerini analiz eder, bir sonraki arızayı gerçekleşmeden önce öngörür.',en:'Analyzes failure patterns and predicts the next breakdown before it happens.'},
-'sec-tag':{tr:'Veri Güvenliği',en:'Data Security'},
+'prob-text':{tr:'En iyi teknisyenler çoğu zaman cevabı dokümanda aramaz. Sesi, titreşimi, kokuyu, ekipmanın geçmişini ve daha önce neyin işe yaradığını bilir.',en:'The best technicians rarely search the manual for answers. They know the sound, the vibration, the smell, the equipment history, and what worked before.'},
+'prob-text2':{tr:"Ama bu bilgi çoğu zaman ERP'de, iş emrinde veya dokümanda yaşamaz. Usta emekli olduğunda ya da ekip değiştiğinde kurum aynı arızayı yeniden öğrenmek zorunda kalır.",en:"But this knowledge rarely lives in the ERP, work order, or manual. When the expert retires or the team changes, the company relearns the same fault from scratch."},
+'prob-c1-h':{tr:'Bilgi dağınık',en:'Knowledge is scattered'},
+'prob-c1-p':{tr:'Dokümanlar, iş emirleri, WhatsApp mesajları ve teknisyen notları farklı yerlerde kalır.',en:'Documents, work orders, WhatsApp messages, and technician notes live in different places.'},
+'prob-c2-h':{tr:'Kapanışlar eksik',en:'Closures are incomplete'},
+'prob-c2-p':{tr:'İş kapansa bile kök neden, kanıt, yapılan işlem ve sonuç çoğu zaman net kaydedilmez.',en:'Even when jobs close, root cause, evidence, intervention, and outcome are rarely clearly recorded.'},
+'prob-c3-h':{tr:'Usta bilgisi kaybolur',en:'Expert knowledge is lost'},
+'prob-c3-p':{tr:'Tecrübeli teknisyenin bildiği pratik çözüm şirket hafızasına dönüşmez.',en:"The experienced technician's practical solution never becomes company memory."},
+'prob-c4-h':{tr:'Aynı arıza tekrar öğrenilir',en:'Same fault relearned'},
+'prob-c4-p':{tr:'Benzer arızalar her seferinde sıfırdan araştırılır, zaman ve parça maliyeti artar.',en:'Similar faults are researched from scratch every time, increasing time and parts cost.'},
+'sol-title':{tr:'Usta çözer. <em>ToolA öğrenir.</em>',en:'Expert fixes it. <em>ToolA learns.</em>'},
+'sol-desc':{tr:'Tecrübeli teknisyen arızayı dokümana bakmadan çözebilir. ToolA, bu çözümü sesli notlardan, fotoğraflardan, ölçümlerden ve kapanış kayıtlarından yakalar. Belirtiyi, kök nedeni, yapılan müdahaleyi, kullanılan parçayı ve sonucu yapılandırarak şirket hafızasına dönüştürür.',en:'An experienced technician can fix the fault without opening a manual. ToolA captures that fix from voice notes, photos, measurements, and closure records — then structures it into company memory.'},
+'sol-highlight':{tr:'Bugün en iyi ustanızın bildiği şey, yarın her teknisyenin cebinde olur.',en:"What your best technician knows today is in every technician's pocket tomorrow."},
+'mem-title':{tr:'Doküman, saha kanıtı ve usta deneyimi <em>tek hafızada</em> birleşir.',en:'Documents, field evidence, and expert experience in <em>one memory.</em>'},
+'mem-sub':{tr:'ToolA sadece teknik dokümanlardan cevap vermez. Sahadan gelen kanıtları, iş kapanışlarını ve uzman teknisyen bilgisini aynı operasyon hafızasında birleştirir.',en:'ToolA does not only answer from technical documents. It combines field evidence, job closures, and expert technician knowledge in the same operational memory.'},
+'sol-h-1':{tr:'Teknik Dokümanlar',en:'Technical Documents'},
+'sol-li-1':{tr:'OEM kılavuzları',en:'OEM manuals'},
+'sol-li-2':{tr:'Servis prosedürleri',en:'Service procedures'},
+'sol-li-3':{tr:'Parça katalogları',en:'Parts catalogs'},
+'sol-li-4':{tr:'HSE ve güvenlik dokümanları',en:'HSE and safety documents'},
+'sol-h-2':{tr:'Saha Kanıtı',en:'Field Evidence'},
+'sol-li-5':{tr:'Fotoğraf ve video',en:'Photos and video'},
+'sol-li-6':{tr:'Ses kaydı',en:'Audio recording'},
+'sol-li-7':{tr:'Hata kodu',en:'Error code'},
+'sol-li-8':{tr:'Ölçüm ve sensör verisi',en:'Measurement and sensor data'},
+'sol-li-9':{tr:'Ekipman etiketi / seri no',en:'Equipment tag / serial no'},
+'sol-h-3':{tr:'Usta Deneyimi',en:'Expert Experience'},
+'sol-li-10':{tr:'Geçmiş çözümler',en:'Past solutions'},
+'sol-li-11':{tr:'Kapanış notları',en:'Closure notes'},
+'sol-li-12':{tr:'Yanlış teşhisler',en:'Misdiagnoses'},
+'sol-li-13':{tr:'Kök nedenler',en:'Root causes'},
+'sol-li-14':{tr:'Tekrar eden arıza örüntüleri',en:'Recurring fault patterns'},
+'how-title':{tr:'Arızadan kanıtlı kapanışa, <em>tek akış.</em>',en:'From fault to verified close, <em>one flow.</em>'},
+'how-h-1':{tr:'Arıza gelir',en:'Fault arrives'},
+'how-p-1':{tr:'WhatsApp, mobil uygulama, ERP veya çağrı merkezinden iş düşer.',en:'Job comes in via WhatsApp, mobile app, ERP, or call center.'},
+'how-h-2':{tr:'Kanıt toplanır',en:'Evidence is captured'},
+'how-p-2':{tr:'Teknisyen fotoğraf, sesli not, hata kodu, ölçüm veya kısa gözlem ekler.',en:'Technician adds photo, voice note, error code, measurement, or brief observation.'},
+'how-h-3':{tr:'ToolA teşhis önerir',en:'ToolA suggests diagnosis'},
+'how-p-3':{tr:'Dokümanlar, geçmiş iş emirleri ve benzer saha vakalarından kaynaklı cevap verir.',en:'Source-referenced answer from documents, past work orders, and similar field cases.'},
+'how-h-4':{tr:'Teknisyen müdahale eder',en:'Technician intervenes'},
+'how-p-4':{tr:'Yapılan işlem, kullanılan parça ve sonuç kayıt altına alınır.',en:'Action taken, parts used, and outcome are recorded.'},
+'how-h-5':{tr:'Kapanış hafızaya dönüşür',en:'Closure becomes memory'},
+'how-p-5':{tr:'Belirti, kök neden, çözüm ve kanıtlar bir sonraki vaka için kullanılabilir hale gelir.',en:'Symptom, root cause, solution, and evidence become available for the next case.'},
+'cap-title':{tr:'Sahada işi bitiren <em>AI akışı.</em>',en:'The AI flow that <em>gets field work done.</em>'},
+'cap-h-1':{tr:'Kaynaklı Teşhis',en:'Sourced Diagnosis'},
+'cap-p-1':{tr:'Dokümanlar, geçmiş vakalar ve saha kanıtlarından kaynak referanslı öneriler verir.',en:'Source-referenced suggestions from documents, past cases, and field evidence.'},
+'cap-h-2':{tr:'Kanıt Yakalama',en:'Evidence Capture'},
+'cap-p-2':{tr:'Fotoğraf, ses, hata kodu, ölçüm ve gözlemler otomatik olarak iş kaydına bağlanır.',en:'Photos, audio, error codes, measurements, and observations auto-linked to the job record.'},
+'cap-h-3':{tr:'Akıllı Kapanış',en:'Smart Closure'},
+'cap-p-3':{tr:'Teknisyen konuşur; ToolA belirti, neden, çözüm, parça ve sonucu kapanış kaydına dönüştürür.',en:'Technician speaks; ToolA turns symptom, cause, solution, part, and outcome into a closure record.'},
+'cap-h-4':{tr:'Usta Hafızası',en:'Expert Memory'},
+'cap-p-4':{tr:'Uzman teknisyenlerin onayladığı çözümler şirket hafızasına eklenir.',en:'Solutions approved by expert technicians are added to company memory.'},
+'cap-h-5':{tr:'Offline Çalışma',en:'Offline Operation'},
+'cap-p-5':{tr:'Saha, tesis ve yüksek güvenlikli ortamlarda internet olmadan çalışabilir.',en:'Works without internet in field, facility, and high-security environments.'},
+'cap-h-6':{tr:'ERP Entegrasyonu',en:'ERP Integration'},
+'cap-p-6':{tr:'SAP, Maximo veya mevcut iş emri sistemlerine kapanış ve aksiyon bilgisi aktarır.',en:'Transfers closure and action data to SAP, Maximo, or existing work order systems.'},
 'sec-title':{tr:'Veriniz altyapınızdan <em>asla çıkmaz.</em>',en:'Your data <em>never leaves</em> your infrastructure.'},
-'sec-desc':{tr:'Ulusal şebekeler, devlet demiryolları ve yüksek güvenlikli tesisler için tasarlandı.',en:'Built for national grids, state railways, and high-security facilities.'},
+'sec-desc':{tr:'ToolA; ulusal şebekeler, devlet kurumları, endüstriyel tesisler ve yüksek güvenlikli saha operasyonları için tasarlanır.',en:'ToolA is built for national grids, government institutions, industrial facilities, and high-security field operations.'},
 'sec-h-1':{tr:'Tam İzole Mimari',en:'Fully Isolated Architecture'},
 'sec-p-1':{tr:'Air-gapped ağlarda çalışır. Sıfır dış veri iletimi.',en:'Runs on air-gapped networks. Zero external data transmission.'},
 'sec-h-2':{tr:'AES-256 & BYOK',en:'AES-256 & BYOK'},
 'sec-p-2':{tr:'Kendi anahtarlarınızla tam kriptografik kontrol.',en:'Full cryptographic control with your own keys.'},
 'sec-h-3':{tr:'Kaynak Gösterimi',en:'Source Citations'},
-'sec-p-3':{tr:'Her yanıt kaynak sayfa ve dokümanı referans gösterir.',en:'Every answer references the source page and document.'},
-'sec-h-4':{tr:'Hızlı Kurulum',en:'Fast Deployment'},
-'sec-p-4':{tr:'Veri taşıma gerektirmeden günler içinde devreye alınır.',en:'Up and running in days, no data migration required.'},
-'cta-tag':{tr:'Pilot Program',en:'Pilot Program'},
-'cta-title':{tr:'Sahada <em>kanıtlayın.</em>',en:'Prove it <em>in the field.</em>'},
-'cta-desc':{tr:'Çok yıllık kontrat istemiyoruz. Kendi teknisyenlerinizle test edin — ROI\'yi kendiniz ölçün.',en:'No multi-year contract. Test with your own technicians — measure the ROI yourself.'},
+'sec-p-3':{tr:'Her yanıt kaynak sayfa, doküman, geçmiş iş veya saha kanıtını referans gösterir.',en:'Every answer references the source page, document, past job, or field evidence.'},
+'sec-h-4':{tr:'Denetlenebilir Hafıza',en:'Auditable Memory'},
+'sec-p-4':{tr:'Hangi veriden hangi cevap üretildiği ve hangi teknisyen tarafından onaylandığı kayıt altında kalır.',en:'Which data produced which answer, and which technician approved it — all on record.'},
+'cta-title':{tr:'6 haftada gerçek sahada <em>kanıtlayın.</em>',en:'Prove it in the real field <em>in 6 weeks.</em>'},
+'cta-desc':{tr:"Çok yıllık kontrat istemiyoruz. Bir ekip, birkaç senaryo ve kendi dokümanlarınızla ToolA'yı sahada test edin.",en:"No multi-year contract. Test ToolA in the field with one team, a few scenarios, and your own documents."},
+'cta-desc2':{tr:'Pilot sonunda doküman arama süresi, kapanış kalitesi, tekrar eden arızalar ve gereksiz müdahale riskini birlikte ölçelim.',en:"At pilot's end, let's measure document search time, closure quality, recurring faults, and unnecessary intervention risk together."},
 'cta-pl-1':{tr:'Teknisyen',en:'Technicians'},
 'cta-pl-2':{tr:'Bakım Senaryosu',en:'Scenarios'},
-'cta-pl-3':{tr:'Hafta',en:'Weeks'},
+'cta-pl-3':{tr:'Sayfa Doküman',en:'Pages of Docs'},
+'cta-pl-4':{tr:'Hafta',en:'Weeks'},
+'cta-pl-5':{tr:'Pilot Etki Raporu',en:'Pilot Impact Report'},
 'cta-btn':{tr:'6 Haftalık Pilot Başlat →',en:'Start 6-Week Pilot →'},
 'footer-tagline':{tr:'Sahanın hafızası.',en:'The memory of the field.'},
 'modal-tag':{tr:'— 6 HAFTALIK PİLOT',en:'— 6-WEEK PILOT'},
 'modal-title':{tr:'Pilotunuzu Başlatın',en:'Start Your Pilot'},
-'modal-desc':{tr:'24 saat içinde size dönüş yapacağız.',en:'We\'ll get back to you within 24 hours.'},
+'modal-desc':{tr:'24 saat içinde size dönüş yapacağız.',en:"We'll get back to you within 24 hours."},
 'modal-l-1':{tr:'Ad Soyad',en:'Full Name'},
 'modal-l-2':{tr:'Şirket',en:'Company'},
 'modal-l-3':{tr:'Telefon',en:'Phone'},
 'modal-l-4':{tr:'E-posta',en:'Email'},
 'modal-btn':{tr:'Pilot Talebi Gönder →',en:'Send Pilot Request →'},
-'modal-success':{tr:'Talebiniz alındı. En kısa sürede dönüş yapacağız.',en:'Request received. We\'ll get back to you shortly.'},
+'modal-success':{tr:'Talebiniz alındı. En kısa sürede dönüş yapacağız.',en:"Request received. We'll get back to you shortly."},
 'ph-name':{tr:'Ahmet Yılmaz',en:'John Smith'},
 'ph-company':{tr:'Şirket adı',en:'Company name'},
 'ph-phone':{tr:'+90 5xx xxx xx xx',en:'+1 555 000 0000'},
