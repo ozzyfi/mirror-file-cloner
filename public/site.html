@@ -193,19 +193,45 @@ footer a{color:var(--slate);text-decoration:none;transition:color .2s}footer a:h
 /* PROOF ecosystem */
 .ecosystem-title{font-family:var(--fm);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--slate);opacity:.5;text-align:center;margin-bottom:1.25rem;margin-top:2rem}
 
+/* CARD HOVER — birleşik etkileşim */
+.prob-card,.cap-card,.sec-card,.how-step,.sol-card{transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}
+.prob-card:hover,.cap-card:hover,.sec-card:hover,.how-step:hover{transform:translateY(-2px);border-color:rgba(232,96,28,.25);box-shadow:0 8px 24px rgba(15,26,46,.06)}
+
+/* HOW grid kademeli */
+@media(max-width:1099px){.how-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:759px){.how-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:559px){.how-grid{grid-template-columns:1fr}}
+
+/* CTA dikey ritim tutarlılığı */
+.cta{padding:4.5rem 0}
+
+/* EXPERT grid orta breakpoint */
+@media(max-width:1199px) and (min-width:961px){.expert-grid{gap:2rem}}
+
 /* RESPONSIVE */
 @media(max-width:960px){
+  .w{padding:0 2rem}.ni{padding:.85rem 2rem}.fi{padding:0 2rem}
   .sol-grid,.cap-grid{grid-template-columns:1fr}
   .sec-grid{grid-template-columns:1fr 1fr}
   .proof-metrics{grid-template-columns:1fr}
-  .pm{border-right:none;border-bottom:1px solid var(--line)}.pm:last-child{border-bottom:none}
+  .pm{border-right:none;border-bottom:1px solid var(--line);padding:2rem 1.5rem}.pm:last-child{border-bottom:none}
+}
+@media(max-width:720px){
+  /* Nav: section linklerini gizle, sadece EN ve CTA kalsın */
+  nav ul li:nth-child(-n+3){display:none}
+  nav ul{gap:.85rem}
 }
 @media(max-width:600px){
-  .w{padding:0 1.5rem}.ni{padding:.85rem 1.5rem}
+  .w{padding:0 1.5rem}.ni{padding:.85rem 1.5rem}.fi{padding:0 1.5rem}
+  section,.ins,.sec-strip,.cta,.proof{padding:3rem 0}
+  .hero{padding-top:5rem}
   .hero-actions{flex-direction:column;align-items:center}
+  .hero-badge{font-size:.66rem;padding:.35rem .75rem}
   .sec-grid{grid-template-columns:1fr}
   .cpills{flex-direction:column;gap:1rem}
-  .fi{flex-direction:column;gap:.75rem;text-align:center}
+  .fi{flex-direction:column;gap:1rem;text-align:center}
+  .fr{flex-direction:column;gap:.65rem}
+  .fr > span[style*="opacity:.25"]{display:none}
   .proof-logos{gap:2rem}
 }
 
