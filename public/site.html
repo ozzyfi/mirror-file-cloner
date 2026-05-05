@@ -410,14 +410,13 @@ function submitForm(){
   var btn=document.getElementById('submit-btn');
   btn.textContent=currentLang==='tr'?'Gönderiliyor...':'Sending...';
   btn.disabled=true;
-  fetch('https://vpasdolhfnhrclxjygzc.supabase.co/functions/v1/submit-pilot-request',{
+  fetch('https://formspree.io/f/mykokjya',{
     method:'POST',
-    headers:{'Content-Type':'application/json','apikey':'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZwYXNkb2xoZm5ocmNseGp5Z3pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc2MTEzMDksImV4cCI6MjA5MzE4NzMwOX0.PAr13ATUCIqu34phSQla5k_rIUvbJTwhvKKfjxAEM8Q'},
-    body:JSON.stringify({name:n,company:c,phone:p,email:e,language:currentLang})
+    headers:{'Content-Type':'application/json','Accept':'application/json'},
+    body:JSON.stringify({name:n,company:c,phone:p,email:e,_subject:'toola.co — Yeni Pilot Talebi: '+c})
   })
-  .then(function(r){return r.json();})
-  .then(function(j){
-    if(j&&j.success){done(btn);}
+  .then(function(r){
+    if(r.ok){done(btn);}
     else{btn.textContent=currentLang==='tr'?'Hata, tekrar deneyin':'Error, try again';btn.disabled=false;}
   })
   .catch(function(){
