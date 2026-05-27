@@ -1,61 +1,56 @@
-# ToolA Landing — Tasarım Denge & Mobil Uyum Revizyonu
+## Hedef
 
-`public/site.html` üzerinde sadece **CSS ve mobil davranış** rötuşları yapılacak. İçerik, kopya, font ve renk paleti **değişmeyecek**.
+Mevcut landing page (site.html) aynen kalsın. Üst menüdeki "Ürün" ve "Nasıl Çalışır" linkleri kaldırılsın; yerlerine iki yeni link gelsin:
 
-## Tespit edilen sorunlar
+- **Teknisyenler için** → mevcut ana sayfayı (site.html) açar (ana sayfa butonu işlevi)
+- **Yöneticiler için** → yeni bir sayfa açar, scroll ile değil ayrı sayfa olarak
 
-1. **Mobil navigasyon taşması** — `Ürün / Nasıl Çalışır / Güvenlik / EN / Pilot Başlat` linkleri 600px altında üst üste binip CTA'yı sıkıştırıyor.
-2. **Tablet boşluk** — 601–960px aralığında container hâlâ `3rem` padding kullanıyor; içerik ekrana yapışık duruyor.
-3. **`.how-grid` 5 sütunluk yapı** — 960–1100px'te kartlar dar ve okunmaz; tek breakpoint var (`960 → 2 sütun`).
-4. **Bölüm dikey ritmi** — desktop'ta `4.5rem`, mobilde de aynı; mobilde fazla nefessiz değil ama tablet/mobilde aşağı yukarı dikey hava düzensiz; `.cta` `5rem`, `.ins` `4.5rem` gibi tutarsızlıklar var.
-5. **Kart etkileşimi yok** — `prob-card / cap-card / sec-card / how-step / sol-card` hiç hover state'i yok, sayfa statik hissettiriyor.
-6. **Section padding mobilde** — `padding:4.5rem 0` mobilde fazla; üst üste binen 6 büyük bölüm sayfayı uzatıyor.
-7. **`.proof-metrics` orta hücre kenarlığı** — mobilde tek sütuna geçince ortadaki hücre alta yapışık duruyor (zaten yarı çözülmüş, tutarlılık için son rötuş).
-8. **Hero badge mobilde** — uzun badge tek satırda zorlanıyor; küçük ekranda font/letter-spacing inceltilmeli.
-9. **Footer `.fr` mobilde** — separator nokta + sosyal ikonlar + e-posta + adres tek satıra sıkışmaya çalışıyor; mobilde dikey hizalama daha temiz olur.
+Yeni sayfa, mevcut sitenin tüm tasarım dilini (renkler, tipografi, nav, footer, modal, dil değiştirici) birebir korur ve verilen içeriği TR + EN olarak sunar.
 
-## Yapılacak değişiklikler (tamamı CSS / küçük HTML class)
+## Yapılacaklar
 
-### A. Container ve section ritmi
-- Tablet (≤960px): `.w{padding:0 2rem}`, `.ni{padding:.85rem 2rem}`, `.fi{padding:0 2rem}`
-- Mobil (≤600px): tüm `section`, `.ins`, `.sec-strip`, `.cta`, `.proof` için `padding:3rem 0`
-- Tutarlılık: `.ins` ve `.sec-strip` desktop'ta `4.5rem 0` kalır, `.cta` `4.5rem 0`'a çekilir (5rem yerine)
+### 1. Yeni sayfa: `public/managers.html`
 
-### B. Mobil navigasyon
-- ≤720px: nav içindeki `Ürün / Nasıl Çalışır / Güvenlik` linkleri gizlenir (CSS `display:none`); sadece **EN** ve **Pilot Başlat** görünür kalır
-- Hamburger menü eklenmez (kapsam dışı, kopya talebi değil)
+- `site.html`'in baştan sona aynı iskeleti: `<head>` meta/SEO, `<nav>`, `<footer>`, pilot modalı, dil değiştirici JS, i18n sözlüğü.
+- Sayfa başlığı/meta: "Yöneticiler için — ToolA".
+- Hero alanı altında verilen içerik bölümlere ayrılmış olarak yerleştirilir:
+  1. **Hero** — "Saha veriniz AI-ready operasyon hafızasına dönüşsün." + açıklama + "Yönetici Panelini Gör" (scroll to #panel) ve "6 Haftalık Pilot Başlat" (modal) CTA'ları.
+  2. **Yönetici Paneli mock kartı** (`#panel`) — Veri Kalitesi Skoru 87%, Eksik kök nedenler 49, Kanıtsız kapanan işler 18, Ekipmana bağlanmamış fotoğraflar 12, Belirsiz lokasyonlar 7, Tekrar eden arızalar listesi (P-204, Klima Oda 304, Jeneratör G-12). Mevcut sitenin kart / panel stili (border, radius, gölge tonları) kullanılır.
+  3. **Problem bloğu** — "İş kapanıyor, ama kurum yeterince öğrenmiyor." başlık + paragraf + 4 alt kart (Eksik kapanışlar, Kanıtsız işler, Tekrar eden problemler geç fark edilir, AI kirli veriyi okuyamaz).
+  4. **Çözüm bloğu** — "Saha verisini yönetilebilir hafızaya çevirin." + paragraf + 6 örnek sorgu kartı (tırnaklı sorular).
+  5. **AI seçim bloğu** — "Hangi AI'ın kullanılacağını siz belirlersiniz." + paragraf + chip listesi (ChatGPT/Connector, Claude/MCP, Microsoft Copilot/M365, Gemini/API, Azure OpenAI, Local LLM/On-prem, Tam izole kurulum).
+  6. **Veri kontrolü bloğu** — "Veri kontrolünüz elinizde kalır." + 4 kart (Rol bazlı erişim, AI erişim kontrolü, Kaynaklı cevaplar, On-prem / yerel kurulum).
+  7. **Kapanış CTA** — "Sahanızı görünür ve sorgulanabilir hale getirin." + paragraf + "6 Haftalık Pilot Başlat" butonu (modal).
+- Tüm metinler `data-i18n` anahtarları ile TR + EN sözlüğüne bağlanır; mevcut dil seçici (TR/EN) çalışır.
+- Hiçbir yeni renk, font veya bileşen eklenmez — sadece site.html'deki mevcut tokenlar (`--ink`, `--line`, `--bg`, kart radius'ları, vb.) ve mevcut sınıflar kullanılır.
 
-### C. `.how-grid` kademeli grid
-- ≥1100px: 5 sütun (mevcut)
-- 760–1099px: 3 sütun
-- 560–759px: 2 sütun
-- ≤559px: 1 sütun
+### 2. Nav güncelleme (her iki dosyada)
 
-### D. Kart hover state'leri (birleşik)
-`.prob-card, .cap-card, .sec-card, .how-step, .sol-card`:
-```
-transition: transform .2s, border-color .2s, box-shadow .2s;
-&:hover { transform: translateY(-2px); border-color: rgba(232,96,28,.25); box-shadow: 0 8px 24px rgba(15,26,46,.06); }
-```
+`index.html` ve `public/site.html` içindeki `<nav>` blokunda:
 
-### E. Hero badge ufak rötuş
-- ≤600px: `.hero-badge` `font-size:.66rem; padding:.35rem .75rem`
+- `#product` ("Ürün") linkini sil
+- `#how` ("Nasıl Çalışır") linkini sil
+- Yerlerine ekle:
+  - `<a href="/site.html">Teknisyenler için</a>` (en: "For Technicians")
+  - `<a href="/managers.html">Yöneticiler için</a>` (en: "For Managers")
+- "Güvenlik" linki ve "Pilot Başlat" CTA'sı aynen kalır.
+- i18n sözlüğüne `nav-tech` ve `nav-mgr` anahtarları eklenir; `nav-product` ve `nav-how` kaldırılır.
+- Mobile kuralı (`nav ul li:nth-child(-n+3){display:none}`) gözden geçirilir — yeni link sayısına göre mobilde de Teknisyenler/Yöneticiler görünür kalacak şekilde ayarlanır; Güvenlik mobilde gizlenebilir.
 
-### F. Footer mobilde dikey hizalama
-- ≤600px: `.fr` `flex-direction:column; gap:.5rem`; ortadaki `·` separator span'leri `display:none` (zaten dikey diziliyor)
+### 3. `managers.html` nav'ı
 
-### G. `.proof-metrics` rötuş
-- Tek sütuna geçtiğinde `.pm` arası ayırıcı zaten alt çizgi; padding `2rem 1.5rem`'e düşürülür
+Aynı nav yapısı; aktif link "Yöneticiler için" hafif vurgulu (opacity 1) olur. Sayfa açılışında tepeden başlar — scroll davranışı yok, ayrı route.
 
-### H. `.expert-grid` dengesi
-- 960–1199px arası `gap:2rem`, daha derli toplu durur (mevcut sadece 3rem)
+## Etkilenmeyen alanlar
 
-## Dokunulmayacaklar
-- Tüm metin/i18n içeriği
-- Renk değişkenleri, fontlar, gradyanlar
-- Hero, mockup, memory card layout'u (sadece spacing/responsive)
-- Modal, formspree, JS davranışı
-- Footer'daki logo, sosyal ikonlar ve email/adres içeriği
+- Footer (iki satırlı yeni hali) aynen korunur ve managers.html'e de aynısı kopyalanır.
+- Pilot modal davranışı ve `submit-pilot-request` edge function entegrasyonu değişmez.
+- React tarafı (`src/`) değişmez; `Index.tsx` zaten `/site.html`'e yönlendiriyor.
 
-## Sonuç
-~40 satırlık odaklı CSS güncellemesi ile sayfa tüm breakpoint'lerde dengeli, kartlar canlı, mobil nav temiz ve dikey ritim tutarlı olacak.
+## Doğrulama
+
+- `/` açıldığında ana sayfa aynı görünür, navda yeni iki link var.
+- "Yöneticiler için" → `/managers.html` tepeden açılır, scroll yok.
+- "Teknisyenler için" → `/site.html` açılır (ana sayfa).
+- TR/EN değiştirici her iki sayfada da çalışır.
+- Mobilde nav okunabilir kalır.
