@@ -221,9 +221,10 @@ footer a{color:var(--slate);text-decoration:none;transition:color .2s}footer a:h
   .pm{border-right:none;border-bottom:1px solid var(--line);padding:2rem 1.5rem}.pm:last-child{border-bottom:none}
 }
 @media(max-width:720px){
-  /* Nav: section linklerini gizle, sadece EN ve CTA kalsın */
-  nav ul li:nth-child(-n+3){display:none}
-  nav ul{gap:.85rem}
+  /* Nav: Güvenlik linkini gizle, Teknisyenler/Yöneticiler/EN/CTA kalsın */
+  nav ul li.nav-hide-mobile{display:none}
+  nav ul{gap:.7rem}
+  nav ul a[data-i18n="nav-tech"],nav ul a[data-i18n="nav-mgr"]{font-size:.82rem}
 }
 @media(max-width:600px){
   .w{padding:0 1.5rem}.ni{padding:.85rem 1.5rem}.fi{padding:0 1.5rem}
