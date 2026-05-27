@@ -326,33 +326,70 @@ footer a{color:var(--slate);text-decoration:none;transition:color .2s}footer a:h
 <!-- 2. PROBLEM -->
 <section id="m-problem"><div class="w">
   <h2 class="st" data-i18n="m-prob-title">İş kapanıyor, ama <em>kurum yeterince öğrenmiyor.</em></h2>
-  <p class="problem-text" data-i18n="m-prob-text">Yöneticiler çoğu zaman işin kapandığını görür; ama işin neden açıldığını, nasıl çözüldüğünü, hangi kanıta dayandığını ve tekrar edip etmediğini net göremez.</p>
+  <p class="problem-text" data-i18n="m-prob-text">Yöneticiler çoğu zaman işin kapandığını görür; ama arızanın neden oluştuğunu, nasıl çözüldüğünü, hangi kanıta dayandığını ve tekrar edip etmediğini net göremez. Bu yüzden aynı ekipman, aynı arıza ve aynı müdahale tekrar tekrar yaşanır.</p>
   <div class="prob-grid">
     <div class="prob-card"><h3 data-i18n="m-prob-c1-h">Eksik kapanışlar</h3><p data-i18n="m-prob-c1-p">Kök neden, kanıt, sonuç ve kullanılan parça bilgisi çoğu zaman eksik kalır.</p></div>
     <div class="prob-card"><h3 data-i18n="m-prob-c2-h">Kanıtsız işler</h3><p data-i18n="m-prob-c2-p">Fotoğraf, ölçüm, hata kodu veya teknisyen notu ilgili iş kaydına bağlanmaz.</p></div>
-    <div class="prob-card"><h3 data-i18n="m-prob-c3-h">Tekrar eden problemler geç fark edilir</h3><p data-i18n="m-prob-c3-p">Aynı ekipman veya lokasyonda tekrar eden arızalar ancak sorun büyüyünce görünür olur.</p></div>
-    <div class="prob-card"><h3 data-i18n="m-prob-c4-h">AI kirli veriyi okuyamaz</h3><p data-i18n="m-prob-c4-p">Eksik, belirsiz ve bağlamsız saha verisi güvenilir AI kullanımını zorlaştırır.</p></div>
+    <div class="prob-card"><h3 data-i18n="m-prob-c3-h">Tekrar eden arızalar geç fark edilir</h3><p data-i18n="m-prob-c3-p">Aynı ekipman veya lokasyonda tekrar eden problemler ancak maliyet büyüyünce görünür olur.</p></div>
+    <div class="prob-card"><h3 data-i18n="m-prob-c4-h">Eksik veri, AI güvenini düşürür</h3><p data-i18n="m-prob-c4-p">Bağlamsız ve eksik saha kayıtları, güvenilir AI kullanımı için yeterli değildir.</p></div>
   </div>
 </div></section>
 
 <!-- 3. ÇÖZÜM (KOYU) -->
 <section class="ins" id="m-solution"><div class="w">
-  <h2 class="st" data-i18n="m-sol-title">Saha verisini <em>yönetilebilir hafızaya</em> çevirin.</h2>
-  <p class="sd" data-i18n="m-sol-desc">ToolA, sahadan gelen ham veriyi ekipman, lokasyon, belirti, kanıt, kök neden, müdahale, sonuç ve kaynak bilgisiyle yapılandırır. Böylece yöneticiler sahayı kaynaklı, denetlenebilir ve AI-ready şekilde görebilir.</p>
-  <div class="sol-grid-3" style="margin-top:2.25rem">
+  <h2 class="st" data-i18n="m-sol-title">Kapanışları ve <em>saha kanıtlarını yönetilebilir hafızaya</em> çevirin.</h2>
+  <p class="sd" data-i18n="m-sol-desc">ToolA, sahadan gelen ham veriyi ekipman, lokasyon, belirti, kanıt, kök neden, müdahale, sonuç ve kaynak bilgisiyle yapılandırır. Böylece yöneticiler bakım operasyonunu kaynaklı, denetlenebilir ve AI-ready şekilde görebilir.</p>
+  <div class="stag" style="margin-top:2.5rem" data-i18n="m-q-tag">Yöneticiler ne sorabilir?</div>
+  <div class="sol-grid-3" style="margin-top:1rem">
     <div class="sol-card right"><p data-i18n="m-q1" style="color:#F7F5F0;font-style:italic">“Son 30 günde en çok tekrar eden saha problemi ve nedeni ne?”</p></div>
     <div class="sol-card left"><p data-i18n="m-q2" style="color:#F7F5F0;font-style:italic">“Hangi ekipmanlarda aynı arıza tekrar ediyor?”</p></div>
     <div class="sol-card left"><p data-i18n="m-q3" style="color:#F7F5F0;font-style:italic">“Hangi işler kanıt olmadan kapatılmış?”</p></div>
     <div class="sol-card left"><p data-i18n="m-q4" style="color:#F7F5F0;font-style:italic">“Hangi kapanışlarda kök neden eksik?”</p></div>
     <div class="sol-card left"><p data-i18n="m-q5" style="color:#F7F5F0;font-style:italic">“Bu ekipmanda daha önce hangi parça değiştirildi?”</p></div>
-    <div class="sol-card right"><p data-i18n="m-q6" style="color:#F7F5F0;font-style:italic">“Hangi bakım senaryosunda gereksiz parça değişimi riski var?”</p></div>
+    <div class="sol-card right"><p data-i18n="m-q6" style="color:#F7F5F0;font-style:italic">“Hangi teknisyenlerin kapanışlarında kök neden en çok eksik kalıyor?”</p></div>
+    <div class="sol-card left"><p data-i18n="m-q7" style="color:#F7F5F0;font-style:italic">“Hangi ekipmanda aynı parça tekrar tekrar değiştiriliyor?”</p></div>
+    <div class="sol-card left"><p data-i18n="m-q8" style="color:#F7F5F0;font-style:italic">“Hangi arızalarda gereksiz müdahale riski yüksek?”</p></div>
+    <div class="sol-card right"><p data-i18n="m-q9" style="color:#F7F5F0;font-style:italic">“Hangi dokümanlar sahada en çok ihtiyaç duyulan konularda yetersiz kalıyor?”</p></div>
+  </div>
+</div></section>
+
+<!-- 3.5 VERİ KALİTESİ -->
+<section id="m-quality"><div class="w">
+  <h2 class="st" data-i18n="m-qual-title">AI'dan önce <em>bakım verinizin kalitesini</em> görün.</h2>
+  <p class="sd" data-i18n="m-qual-desc">ToolA eksik, belirsiz veya kanıtsız kayıtları tespit eder. Kapanış kalitesini ölçer ve yöneticilere operasyonel kör noktaları gösterir.</p>
+  <div class="cap-grid-3" style="grid-template-columns:repeat(5,1fr);gap:1rem">
+    <div class="prob-card" style="text-align:left">
+      <div class="mockup-label" data-i18n="m-qual-1l">Veri Kalitesi Skoru</div>
+      <div style="font-family:var(--fm);font-size:2rem;font-weight:700;color:var(--teal);line-height:1;margin:.35rem 0">87%</div>
+      <p style="font-size:.85rem;color:var(--slate)" data-i18n="m-qual-1d">AI-ready bakım verisi</p>
+    </div>
+    <div class="prob-card" style="text-align:left">
+      <div class="mockup-label" data-i18n="m-qual-2l">Eksik kök nedenler</div>
+      <div style="font-family:var(--fm);font-size:1.8rem;font-weight:700;color:var(--orange);line-height:1;margin:.35rem 0">49</div>
+      <p style="font-size:.85rem;color:var(--slate)" data-i18n="m-qual-2d">iş kaydı</p>
+    </div>
+    <div class="prob-card" style="text-align:left">
+      <div class="mockup-label" data-i18n="m-qual-3l">Kanıtsız kapanan işler</div>
+      <div style="font-family:var(--fm);font-size:1.8rem;font-weight:700;color:var(--orange);line-height:1;margin:.35rem 0">18</div>
+      <p style="font-size:.85rem;color:var(--slate)" data-i18n="m-qual-3d">iş kaydı</p>
+    </div>
+    <div class="prob-card" style="text-align:left">
+      <div class="mockup-label" data-i18n="m-qual-4l">Bağlanmamış fotoğraflar</div>
+      <div style="font-family:var(--fm);font-size:1.8rem;font-weight:700;color:var(--orange);line-height:1;margin:.35rem 0">12</div>
+      <p style="font-size:.85rem;color:var(--slate)" data-i18n="m-qual-4d">medya kaydı</p>
+    </div>
+    <div class="prob-card" style="text-align:left">
+      <div class="mockup-label" data-i18n="m-qual-5l">Belirsiz lokasyonlar</div>
+      <div style="font-family:var(--fm);font-size:1.8rem;font-weight:700;color:var(--orange);line-height:1;margin:.35rem 0">7</div>
+      <p style="font-size:.85rem;color:var(--slate)" data-i18n="m-qual-5d">kayıt</p>
+    </div>
   </div>
 </div></section>
 
 <!-- 4. AI SEÇİMİ -->
 <section id="m-ai"><div class="w">
   <h2 class="st" data-i18n="m-ai-title">Hangi AI'ın kullanılacağını <em>siz belirlersiniz.</em></h2>
-  <p class="sd" data-i18n="m-ai-desc">ToolA kendi modelini dayatmaz. Saha verinizi düzenler, kaynaklandırır ve şirketinizin izin verdiği yapay zekâ ile güvenli şekilde kullanılabilir hale getirir.</p>
+  <p class="sd" data-i18n="m-ai-desc">ToolA kendi modelini dayatmaz. Saha verinizi düzenler, kaynaklandırır ve kurumunuzun izin verdiği AI ortamında kullanılabilir hale getirir. İster bulut tabanlı AI, ister Microsoft ekosistemi, ister local LLM veya on-prem kurulum tercih edebilirsiniz.</p>
   <div class="proof-logos" style="margin-top:2rem;gap:1rem;justify-content:flex-start">
     <span style="font-size:.85rem;padding:.55rem 1rem;border:1px solid var(--line);border-radius:99px;background:var(--card);text-transform:none;letter-spacing:.02em;opacity:.85" data-i18n="m-ai-1">ChatGPT / Connector</span>
     <span style="font-size:.85rem;padding:.55rem 1rem;border:1px solid var(--line);border-radius:99px;background:var(--card);text-transform:none;letter-spacing:.02em;opacity:.85" data-i18n="m-ai-2">Claude / MCP</span>
