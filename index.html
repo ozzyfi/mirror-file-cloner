@@ -221,9 +221,10 @@ footer a{color:var(--slate);text-decoration:none;transition:color .2s}footer a:h
   .pm{border-right:none;border-bottom:1px solid var(--line);padding:2rem 1.5rem}.pm:last-child{border-bottom:none}
 }
 @media(max-width:720px){
-  /* Nav: section linklerini gizle, sadece EN ve CTA kalsın */
-  nav ul li:nth-child(-n+3){display:none}
-  nav ul{gap:.85rem}
+  /* Nav: Güvenlik linkini gizle, Teknisyenler/Yöneticiler/EN/CTA kalsın */
+  nav ul li.nav-hide-mobile{display:none}
+  nav ul{gap:.7rem}
+  nav ul a[data-i18n="nav-tech"],nav ul a[data-i18n="nav-mgr"]{font-size:.82rem}
 }
 @media(max-width:600px){
   .w{padding:0 1.5rem}.ni{padding:.85rem 1.5rem}.fi{padding:0 1.5rem}
@@ -265,11 +266,11 @@ footer a{color:var(--slate);text-decoration:none;transition:color .2s}footer a:h
 <body>
 
 <nav><div class="ni">
-  <a class="logo" href="#"><img src="/toola-logo.png" alt="ToolA"/></a>
+  <a class="logo" href="/site.html"><img src="/toola-logo.png" alt="ToolA"/></a>
   <ul>
-    <li><a href="#product" data-i18n="nav-product" style="color:var(--ink);text-decoration:none;font-size:.95rem;font-weight:500;opacity:.75">Ürün</a></li>
-    <li><a href="#how" data-i18n="nav-how" style="color:var(--ink);text-decoration:none;font-size:.95rem;font-weight:500;opacity:.75">Nasıl Çalışır</a></li>
-    <li><a href="#security" data-i18n="nav-sec" style="color:var(--ink);text-decoration:none;font-size:.95rem;font-weight:500;opacity:.75">Güvenlik</a></li>
+    <li><a href="/site.html" data-i18n="nav-tech" style="color:var(--ink);text-decoration:none;font-size:.95rem;font-weight:500;opacity:1">Teknisyenler için</a></li>
+    <li><a href="/managers.html" data-i18n="nav-mgr" style="color:var(--ink);text-decoration:none;font-size:.95rem;font-weight:500;opacity:.75">Yöneticiler için</a></li>
+    <li class="nav-hide-mobile"><a href="#security" data-i18n="nav-sec" style="color:var(--ink);text-decoration:none;font-size:.95rem;font-weight:500;opacity:.75">Güvenlik</a></li>
     <li><button class="lang-btn" onclick="toggleLang()">EN</button></li>
     <li><a href="javascript:void(0)" onclick="openModal()" class="ncta" data-i18n="nav-cta">Pilot Başlat</a></li>
   </ul>
@@ -530,8 +531,8 @@ footer a{color:var(--slate);text-decoration:none;transition:color .2s}footer a:h
 var currentLang='tr';
 var T={
 'nav-cta':{tr:'Pilot Başlat',en:'Start Pilot'},
-'nav-product':{tr:'Ürün',en:'Product'},
-'nav-how':{tr:'Nasıl Çalışır',en:'How It Works'},
+'nav-tech':{tr:'Teknisyenler için',en:'For Technicians'},
+'nav-mgr':{tr:'Yöneticiler için',en:'For Managers'},
 'nav-sec':{tr:'Güvenlik',en:'Security'},
 
 'hero-eyebrow':{tr:'Sahanın hafızası.',en:'The memory of the field.'},
