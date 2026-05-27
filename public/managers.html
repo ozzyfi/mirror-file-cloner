@@ -311,7 +311,7 @@ footer a{color:var(--slate);text-decoration:none;transition:color .2s}footer a:h
           <div class="mockup-val" style="font-family:var(--fm);color:var(--orange);font-weight:600" data-i18n="m-panel-r3v">12 medya kaydı</div>
         </div>
         <div class="mockup-row" style="display:flex;justify-content:space-between;gap:1rem">
-          <div class="mockup-val" data-i18n="m-panel-r4">Belirsiz lokasyonlar</div>
+          <div class="mockup-val" data-i18n="m-panel-r4">Belirsiz ekipman / lokasyon</div>
           <div class="mockup-val" style="font-family:var(--fm);color:var(--orange);font-weight:600" data-i18n="m-panel-r4v">7 kayıt</div>
         </div>
         <div class="mockup-row">
@@ -339,6 +339,21 @@ footer a{color:var(--slate);text-decoration:none;transition:color .2s}footer a:h
 <section class="ins" id="m-solution"><div class="w">
   <h2 class="st" data-i18n="m-sol-title">Kapanışları ve <em>saha kanıtlarını yönetilebilir hafızaya</em> çevirin.</h2>
   <p class="sd" data-i18n="m-sol-desc">ToolA, sahadan gelen ham veriyi ekipman, lokasyon, belirti, kanıt, kök neden, müdahale, sonuç ve kaynak bilgisiyle yapılandırır. Böylece yöneticiler bakım operasyonunu kaynaklı, denetlenebilir ve AI-ready şekilde görebilir.</p>
+  <div class="stag" style="margin-top:2.5rem" data-i18n="m-flow-title">Dağınık bakım verisi girer. AI-ready bakım hafızası çıkar.</div>
+  <div class="sol-grid-3" style="margin-top:1rem">
+    <div class="sol-card left">
+      <h4 data-i18n="m-flow-1h">Kanıtı Topla</h4>
+      <p data-i18n="m-flow-1p">Saha ekibi alışkanlıklarını değiştirmez. İş emri, mobil uygulama, ERP veya bakım sisteminden gelen fotoğraf, sesli not, hata kodu ve ölçümler ToolA'ya akar.</p>
+    </div>
+    <div class="sol-card left">
+      <h4 data-i18n="m-flow-2h">Hafızaya Çevir</h4>
+      <p data-i18n="m-flow-2p">Gelen ham saha verisi ekipman, lokasyon, belirti, kök neden, kullanılan parça, müdahale ve sonuç bilgisiyle yapılandırılır.</p>
+    </div>
+    <div class="sol-card right">
+      <h4 data-i18n="m-flow-3h">Kurumunuzun İzin Verdiği AI ile Sorgula</h4>
+      <p data-i18n="m-flow-3p">Veriler temizlenip kaynaklandırıldıktan sonra ChatGPT, Claude, Copilot, Azure OpenAI veya Local LLM gibi kurumunuzun güvenlik politikasına uygun AI ortamlarında sorgulanabilir hale gelir.</p>
+    </div>
+  </div>
   <div class="stag" style="margin-top:2.5rem" data-i18n="m-q-tag">Yöneticiler ne sorabilir?</div>
   <div class="sol-grid-3" style="margin-top:1rem">
     <div class="sol-card right"><p data-i18n="m-q1" style="color:#F7F5F0;font-style:italic">“Son 30 günde en çok tekrar eden saha problemi ve nedeni ne?”</p></div>
@@ -379,7 +394,7 @@ footer a{color:var(--slate);text-decoration:none;transition:color .2s}footer a:h
       <p style="font-size:.85rem;color:var(--slate)" data-i18n="m-qual-4d">medya kaydı</p>
     </div>
     <div class="prob-card" style="text-align:left">
-      <div class="mockup-label" data-i18n="m-qual-5l">Belirsiz lokasyonlar</div>
+      <div class="mockup-label" data-i18n="m-qual-5l">Belirsiz ekipman / lokasyon</div>
       <div style="font-family:var(--fm);font-size:1.8rem;font-weight:700;color:var(--orange);line-height:1;margin:.35rem 0">7</div>
       <p style="font-size:.85rem;color:var(--slate)" data-i18n="m-qual-5d">kayıt</p>
     </div>
@@ -630,7 +645,7 @@ var T={
 'm-panel-r2v':{tr:'18 iş kaydı',en:'18 jobs'},
 'm-panel-r3':{tr:'Ekipmana bağlanmamış fotoğraflar',en:'Photos not linked to equipment'},
 'm-panel-r3v':{tr:'12 medya kaydı',en:'12 media items'},
-'m-panel-r4':{tr:'Belirsiz lokasyonlar',en:'Unclear locations'},
+'m-panel-r4':{tr:'Belirsiz ekipman / lokasyon',en:'Unclear equipment / location'},
 'm-panel-r4v':{tr:'7 kayıt',en:'7 records'},
 'm-panel-repeat':{tr:'Tekrar eden arızalar',en:'Recurring faults'},
 'm-panel-repeat-v':{tr:'Pompa P-204 · Klima Oda 304 · Jeneratör G-12',en:'Pump P-204 · AC Room 304 · Generator G-12'},
@@ -669,7 +684,7 @@ var T={
 'm-qual-3d':{tr:'iş kaydı',en:'jobs'},
 'm-qual-4l':{tr:'Bağlanmamış fotoğraflar',en:'Unlinked photos'},
 'm-qual-4d':{tr:'medya kaydı',en:'media items'},
-'m-qual-5l':{tr:'Belirsiz lokasyonlar',en:'Unclear locations'},
+'m-qual-5l':{tr:'Belirsiz ekipman / lokasyon',en:'Unclear equipment / location'},
 'm-qual-5d':{tr:'kayıt',en:'records'},
 
 'm-ai-title':{tr:"Hangi AI'ın kullanılacağını <em>siz belirlersiniz.</em>",en:'You decide <em>which AI is used.</em>'},
