@@ -69,22 +69,32 @@ section{padding:4.5rem 0}
 /* PROBLEM */
 .problem-text{font-size:1.12rem;color:var(--slate);max-width:600px;margin-top:1rem;line-height:1.8}
 
-/* SOLUTION (DARK) */
-.ins{background:var(--ink);color:#F7F5F0;padding:4.5rem 0;position:relative}
-.ins .stag{color:var(--orange)}.ins .st{color:#F7F5F0}.ins .sd{color:rgba(247,245,240,.55)}
+/* SOLUTION (LIGHT) */
+.ins{background:#fff;color:var(--ink);padding:4.5rem 0;position:relative}
+.ins .stag{color:var(--orange)}.ins .st{color:var(--ink)}.ins .sd{color:var(--slate)}
 .sol-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2rem}
 .sol-card{padding:1.75rem;border-radius:12px}
-.sol-card.left{background:rgba(247,245,240,.04);border:1px solid rgba(247,245,240,.06)}
-.sol-card.right{background:rgba(232,96,28,.05);border:1px solid rgba(232,96,28,.08)}
+.sol-card.left{background:#f8f8f8;border:1px solid var(--line)}
+.sol-card.right{background:rgba(232,96,28,.04);border:1px solid rgba(232,96,28,.1)}
 .sol-card h4{font-family:var(--fm);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.5rem}
-.sol-card.left h4{color:rgba(247,245,240,.5)}.sol-card.right h4{color:var(--orange)}
-.sol-card p{font-size:1rem;color:rgba(247,245,240,.5);line-height:1.7}
+.sol-card.left h4{color:var(--slate)}.sol-card.right h4{color:var(--orange)}
+.sol-card p{font-size:1rem;color:var(--slate);line-height:1.7}
 .sol-card ul{list-style:none;margin:0;padding:0}
-.sol-card li{font-size:.95rem;color:rgba(247,245,240,.6);padding:.4rem 0;border-bottom:1px solid rgba(247,245,240,.04)}
+.sol-card li{font-size:.95rem;color:var(--slate);padding:.4rem 0;border-bottom:1px solid var(--line)}
 .sol-card li:last-child{border-bottom:none}
 .sol-result{margin-top:1.5rem;padding:1.5rem;background:linear-gradient(135deg,rgba(26,122,109,.06),rgba(232,96,28,.04));border:1px solid rgba(26,122,109,.08);border-radius:10px;text-align:center}
-.sol-result h4{font-family:var(--fd);font-size:1.2rem;color:#F7F5F0;margin-bottom:.25rem}
-.sol-result p{color:rgba(247,245,240,.45);font-size:.9rem}
+.sol-result h4{font-family:var(--fd);font-size:1.2rem;color:var(--ink);margin-bottom:.25rem}
+.sol-result p{color:var(--slate);font-size:.9rem}
+
+.step-list{margin-top:1rem}
+.step-item{display:flex;gap:1.5rem;padding:2.5rem 0;border-bottom:1px solid #e5e5e5;align-items:flex-start}
+.step-item:first-child{padding-top:0}
+.step-item:last-child{border-bottom:none;padding-bottom:0}
+.step-num{flex-shrink:0;width:60px;display:flex;align-items:center;justify-content:flex-start}
+.step-num-inner{width:40px;height:40px;border-radius:50%;border:1.5px solid #ccc;display:flex;align-items:center;justify-content:center;font-family:var(--fm);font-size:.9rem;font-weight:700;color:var(--ink)}
+.step-content{flex:1}
+.step-content h3{font-weight:600;font-size:1.25rem;color:var(--ink);margin-bottom:.35rem;line-height:1.3}
+.step-content p{font-size:1rem;color:var(--slate);line-height:1.7}
 
 /* CAPABILITIES — horizontal layout for variety */
 .cap-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2rem}
@@ -340,31 +350,40 @@ footer a{color:var(--slate);text-decoration:none;transition:color .2s}footer a:h
   <h2 class="st" data-i18n="m-sol-title">Kapanışları ve <em>saha kanıtlarını yönetilebilir hafızaya</em> çevirin.</h2>
   <p class="sd" data-i18n="m-sol-desc">ToolA, sahadan gelen ham veriyi ekipman, lokasyon, belirti, kanıt, kök neden, müdahale, sonuç ve kaynak bilgisiyle yapılandırır. Böylece yöneticiler bakım operasyonunu kaynaklı, denetlenebilir ve AI-ready şekilde görebilir.</p>
   <div class="stag" style="margin-top:2.5rem" data-i18n="m-flow-title">Dağınık bakım verisi girer. AI-ready bakım hafızası çıkar.</div>
-  <div class="sol-grid-3" style="margin-top:1rem">
-    <div class="sol-card left">
-      <h4 data-i18n="m-flow-1h">Kanıtı Topla</h4>
-      <p data-i18n="m-flow-1p">Saha ekibi alışkanlıklarını değiştirmez. İş emri, mobil uygulama, ERP veya bakım sisteminden gelen fotoğraf, sesli not, hata kodu ve ölçümler ToolA'ya akar.</p>
+  <div class="step-list">
+    <div class="step-item">
+      <div class="step-num"><div class="step-num-inner">1</div></div>
+      <div class="step-content">
+        <h3 data-i18n="m-flow-1h">Kanıtı Topla</h3>
+        <p data-i18n="m-flow-1p">Saha ekibi alışkanlıklarını değiştirmez. İş emri, mobil uygulama, ERP veya bakım sisteminden gelen fotoğraf, sesli not, hata kodu ve ölçümler ToolA'ya akar.</p>
+      </div>
     </div>
-    <div class="sol-card left">
-      <h4 data-i18n="m-flow-2h">Hafızaya Çevir</h4>
-      <p data-i18n="m-flow-2p">Gelen ham saha verisi ekipman, lokasyon, belirti, kök neden, kullanılan parça, müdahale ve sonuç bilgisiyle yapılandırılır.</p>
+    <div class="step-item">
+      <div class="step-num"><div class="step-num-inner">2</div></div>
+      <div class="step-content">
+        <h3 data-i18n="m-flow-2h">Hafızaya Çevir</h3>
+        <p data-i18n="m-flow-2p">Gelen ham saha verisi ekipman, lokasyon, belirti, kök neden, kullanılan parça, müdahale ve sonuç bilgisiyle yapılandırılır.</p>
+      </div>
     </div>
-    <div class="sol-card right">
-      <h4 data-i18n="m-flow-3h">Kurumunuzun İzin Verdiği AI ile Sorgula</h4>
-      <p data-i18n="m-flow-3p">Veriler temizlenip kaynaklandırıldıktan sonra ChatGPT, Claude, Copilot, Azure OpenAI veya Local LLM gibi kurumunuzun güvenlik politikasına uygun AI ortamlarında sorgulanabilir hale gelir.</p>
+    <div class="step-item">
+      <div class="step-num"><div class="step-num-inner">3</div></div>
+      <div class="step-content">
+        <h3 data-i18n="m-flow-3h">AI ile Sorgula</h3>
+        <p data-i18n="m-flow-3p">Veriler temizlenip kaynaklandırıldıktan sonra ChatGPT, Claude, Copilot, Azure OpenAI veya Local LLM gibi kurumunuzun güvenlik politikasına uygun AI ortamlarında sorgulanabilir hale gelir.</p>
+      </div>
     </div>
   </div>
   <div class="stag" style="margin-top:2.5rem" data-i18n="m-q-tag">Yöneticiler ne sorabilir?</div>
   <div class="sol-grid-3" style="margin-top:1rem">
-    <div class="sol-card right"><p data-i18n="m-q1" style="color:#F7F5F0;font-style:italic">“Son 30 günde en çok tekrar eden arıza ve kök nedeni ne?”</p></div>
-    <div class="sol-card left"><p data-i18n="m-q2" style="color:#F7F5F0;font-style:italic">“Hangi ekipmanlarda aynı arıza tekrar ediyor?”</p></div>
-    <div class="sol-card left"><p data-i18n="m-q3" style="color:#F7F5F0;font-style:italic">“Hangi işler kanıt olmadan kapatılmış?”</p></div>
-    <div class="sol-card left"><p data-i18n="m-q4" style="color:#F7F5F0;font-style:italic">“Hangi kapanışlarda kök neden eksik?”</p></div>
-    <div class="sol-card left"><p data-i18n="m-q5" style="color:#F7F5F0;font-style:italic">“Bu ekipmanda daha önce hangi parça değiştirildi?”</p></div>
-    <div class="sol-card right"><p data-i18n="m-q6" style="color:#F7F5F0;font-style:italic">“Hangi teknisyenlerin kapanışlarında kök neden en çok eksik kalıyor?”</p></div>
-    <div class="sol-card left"><p data-i18n="m-q7" style="color:#F7F5F0;font-style:italic">“Hangi ekipmanda aynı parça tekrar tekrar değiştiriliyor?”</p></div>
-    <div class="sol-card left"><p data-i18n="m-q8" style="color:#F7F5F0;font-style:italic">“Hangi arızalarda gereksiz müdahale riski yüksek?”</p></div>
-    <div class="sol-card right"><p data-i18n="m-q9" style="color:#F7F5F0;font-style:italic">“Hangi dokümanlar sahada en çok ihtiyaç duyulan konularda yetersiz kalıyor?”</p></div>
+    <div class="sol-card right"><p data-i18n="m-q1" style="font-style:italic">“Son 30 günde en çok tekrar eden arıza ve kök nedeni ne?”</p></div>
+    <div class="sol-card left"><p data-i18n="m-q2" style="font-style:italic">“Hangi ekipmanlarda aynı arıza tekrar ediyor?”</p></div>
+    <div class="sol-card left"><p data-i18n="m-q3" style="font-style:italic">“Hangi işler kanıt olmadan kapatılmış?”</p></div>
+    <div class="sol-card left"><p data-i18n="m-q4" style="font-style:italic">“Hangi kapanışlarda kök neden eksik?”</p></div>
+    <div class="sol-card left"><p data-i18n="m-q5" style="font-style:italic">“Bu ekipmanda daha önce hangi parça değiştirildi?”</p></div>
+    <div class="sol-card right"><p data-i18n="m-q6" style="font-style:italic">“Hangi teknisyenlerin kapanışlarında kök neden en çok eksik kalıyor?”</p></div>
+    <div class="sol-card left"><p data-i18n="m-q7" style="font-style:italic">“Hangi ekipmanda aynı parça tekrar tekrar değiştiriliyor?”</p></div>
+    <div class="sol-card left"><p data-i18n="m-q8" style="font-style:italic">“Hangi arızalarda gereksiz müdahale riski yüksek?”</p></div>
+    <div class="sol-card right"><p data-i18n="m-q9" style="font-style:italic">“Hangi dokümanlar sahada en çok ihtiyaç duyulan konularda yetersiz kalıyor?”</p></div>
   </div>
 </div></section>
 
@@ -668,7 +687,7 @@ var T={
 'm-flow-1p':{tr:"Saha ekibi alışkanlıklarını değiştirmez. İş emri, mobil uygulama, ERP veya bakım sisteminden gelen fotoğraf, sesli not, hata kodu ve ölçümler ToolA'ya akar.",en:'Field teams keep their habits. Photos, voice notes, error codes, and measurements flow into ToolA from work orders, mobile apps, ERP, or maintenance systems.'},
 'm-flow-2h':{tr:'Hafızaya Çevir',en:'Turn into Memory'},
 'm-flow-2p':{tr:'Gelen ham saha verisi ekipman, lokasyon, belirti, kök neden, kullanılan parça, müdahale ve sonuç bilgisiyle yapılandırılır.',en:'Incoming raw field data is structured with equipment, location, symptom, root cause, parts used, intervention, and outcome.'},
-'m-flow-3h':{tr:'Kurumunuzun İzin Verdiği AI ile Sorgula',en:'Query with Your Approved AI'},
+'m-flow-3h':{tr:'AI ile Sorgula',en:'Query with AI'},
 'm-flow-3p':{tr:'Veriler temizlenip kaynaklandırıldıktan sonra ChatGPT, Claude, Copilot, Azure OpenAI veya Local LLM gibi kurumunuzun güvenlik politikasına uygun AI ortamlarında sorgulanabilir hale gelir.',en:'Once cleaned and sourced, data becomes queryable in AI environments that match your security policy — ChatGPT, Claude, Copilot, Azure OpenAI, or Local LLM.'},
 'm-q-tag':{tr:'Yöneticiler ne sorabilir?',en:'What can managers ask?'},
 'm-q1':{tr:'“Son 30 günde en çok tekrar eden arıza ve kök nedeni ne?”',en:'“What is the most recurring fault and root cause in the last 30 days?”'},
