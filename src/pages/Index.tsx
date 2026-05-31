@@ -2,9 +2,14 @@ import { useEffect } from "react";
 
 const Index = () => {
   useEffect(() => {
-    window.location.replace("/site.html");
+    window.location.href = "/site.html";
   }, []);
-  return null;
+
+  return (
+    <noscript>
+      <meta httpEquiv="refresh" content="0;url=/site.html" />
+    </noscript>
+  );
 };
 
 export default Index;
