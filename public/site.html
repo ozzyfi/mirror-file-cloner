@@ -261,6 +261,53 @@ footer a{color:var(--slate);text-decoration:none;transition:color .2s}footer a:h
 
 .lang-btn{background:none;border:none;color:var(--ink);font-family:var(--fm);font-size:1.05rem;letter-spacing:.03em;padding:0;cursor:pointer;transition:color .2s;font-weight:600;opacity:.7}
 .lang-btn:hover{opacity:1}
+
+/* FINAL HERO POSITION FIX — ToolA static site page */
+body .hero {
+min-height: auto !important;
+height: auto !important;
+display: flex !important;
+align-items: flex-start !important;
+padding-top: 112px !important;
+padding-bottom: 72px !important;
+}
+
+body .hero .w {
+width: 100% !important;
+}
+
+body .hero-inner {
+align-items: center !important;
+margin-top: 0 !important;
+padding-top: 0 !important;
+}
+
+body .hero-left,
+body .hero-right {
+margin-top: 0 !important;
+padding-top: 0 !important;
+}
+
+@media (min-width: 1200px) {
+body .hero {
+padding-top: 118px !important;
+padding-bottom: 80px !important;
+}
+}
+
+@media (max-width: 960px) {
+body .hero {
+padding-top: 104px !important;
+padding-bottom: 64px !important;
+}
+}
+
+@media (max-width: 600px) {
+body .hero {
+padding-top: 92px !important;
+padding-bottom: 52px !important;
+}
+}
 </style>
 </head>
 <body>
