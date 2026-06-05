@@ -159,7 +159,7 @@ export const T: Dict = {
   "sec-p-4": { tr: "Hangi veriden hangi cevap üretildiği ve kimin onayladığı kayıt altında kalır.", en: "Which data produced which answer, and who approved it — all on record." },
 
   // CTA
-  "cta-title": { tr: "6 haftada gerçek sahada kanıtlayın.", en: "Prove it in the real field in 6 weeks." },
+  "cta-title": { tr: "6 haftada gerçek sahada <em>kanıtlayın.</em>", en: "Prove it in the real field <em>in 6 weeks.</em>" },
   "cta-desc": { tr: "Bir ekip, birkaç bakım senaryosu ve kendi dokümanlarınızla ToolA'yı sahada test edin.", en: "Test ToolA in the field with one team, a few maintenance scenarios, and your own documents." },
   "cta-desc2": { tr: "Pilot sonunda kaynaklı cevap süresi, kapanış kalitesi, tekrar eden arızalar ve gereksiz müdahale riskini birlikte ölçelim.", en: "At pilot's end, let's measure sourced answer time, closure quality, recurring faults, and unnecessary intervention risk together." },
   "cta-pl-1": { tr: "Teknisyen", en: "Technicians" },
