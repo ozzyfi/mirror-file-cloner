@@ -282,10 +282,9 @@ export default function Index() {
       </section>
 
       {/* CTA */}
-      <section className="cta" id="cta">
+      <section className="cta" id="pilot">
         <div className="w">
-          <div className="stag">— PILOT</div>
-          <h2 className="st">{t("cta-title")}</h2>
+          <h2 className="st" dangerouslySetInnerHTML={{ __html: t("cta-title") }} />
           <p className="sd">{t("cta-desc")}</p>
           <p className="sd">{t("cta-desc2")}</p>
           <div className="cpills">
