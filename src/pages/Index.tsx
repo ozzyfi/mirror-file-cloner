@@ -182,7 +182,78 @@ export default function Index() {
         </div>
       </section>
 
+      {/* CAPABILITIES */}
+      <section id="capabilities">
+        <div className="w">
+          <div className="stag">— CAPABILITIES</div>
+          <h2 className="st">{t("cap-title")}</h2>
+          <div className="cap-grid-3">
+            {[1, 2, 3, 4, 5, 6].map((i) => (
+              <div className="cap-card" key={i}>
+                <div className="cap-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </div>
+                <div className="cap-content">
+                  <h3>{t(`cap-h-${i}`)}</h3>
+                  <p>{t(`cap-p-${i}`)}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SECURITY */}
+      <section className="sec-strip" id="security">
+        <div className="w">
+          <div className="stag">— SECURITY</div>
+          <h2 className="st">{t("sec-title")}</h2>
+          <p className="sd">{t("sec-desc")}</p>
+          <div className="sec-grid">
+            {[1, 2, 3, 4].map((i) => (
+              <div className="sec-card" key={i}>
+                <div className="sec-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M12 2 4 6v6c0 5 3.5 9.5 8 10 4.5-.5 8-5 8-10V6z" />
+                  </svg>
+                </div>
+                <h3>{t(`sec-h-${i}`)}</h3>
+                <p>{t(`sec-p-${i}`)}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="cta" id="cta">
+        <div className="w">
+          <div className="stag">— PILOT</div>
+          <h2 className="st">{t("cta-title")}</h2>
+          <p className="sd">{t("cta-desc")}</p>
+          <p className="sd">{t("cta-desc2")}</p>
+          <div className="cpills">
+            {[
+              ["5–10", "cta-pl-1"],
+              ["2–3", "cta-pl-2"],
+              ["200–500", "cta-pl-3"],
+              ["6", "cta-pl-4"],
+              ["1", "cta-pl-5"],
+            ].map(([n, k]) => (
+              <div className="cpill" key={k}>
+                <div className="pn">{n}</div>
+                <div className="pl">{t(k)}</div>
+              </div>
+            ))}
+          </div>
+          <button className="bp" onClick={open}>{t("cta-btn")}</button>
+        </div>
+      </section>
+
       <Footer />
+
     </>
   );
 }
