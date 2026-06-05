@@ -147,7 +147,7 @@ export const T: Dict = {
   "cap-p-6": { tr: "SAP, Maximo veya mevcut iş emri sistemlerine entegre edilebilir.", en: "Integrates with SAP, Maximo, or existing work order systems." },
 
   // Security
-  "sec-title": { tr: "Veriniz altyapınızdan asla çıkmaz.", en: "Your data never leaves your infrastructure." },
+  "sec-title": { tr: "Veriniz altyapınızdan <em>asla çıkmaz.</em>", en: "Your data <em>never leaves</em> your infrastructure." },
   "sec-desc": { tr: "ToolA; veri güvenliği, denetlenebilirlik ve offline çalışma gerektiren saha operasyonları için tasarlanır.", en: "ToolA is built for national grids, government institutions, industrial facilities, and high-security field operations." },
   "sec-h-1": { tr: "Tam İzole Mimari", en: "Fully Isolated Architecture" },
   "sec-p-1": { tr: "Air-gapped ağlarda çalışır. Sıfır dış veri iletimi.", en: "Runs on air-gapped networks. Zero external data transmission." },
