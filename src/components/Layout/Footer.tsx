@@ -8,9 +8,9 @@ export default function Footer() {
       <div className="fi">
         <div className="frow">
           <div className="fl">
-            <img src="/toola-logo.png" alt="ToolA" style={{ height: 24 }} />
-            <span className="sep">·</span>
-            <span style={{ fontStyle: "italic", fontFamily: "var(--fd)" }}>{t("footer-tagline")}</span>
+            <img src="/toola-logo.png" alt="ToolA" style={{ height: 28, width: "auto", objectFit: "contain" }} />
+            <span style={{ opacity: 0.25 }}>·</span>
+            <span style={{ color: "var(--slate)", fontSize: "1rem" }}>{t("footer-tagline")}</span>
           </div>
           <div className="fr">
             <span className="fsocial">
