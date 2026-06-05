@@ -92,8 +92,7 @@ export default function Index() {
       {/* PROBLEM */}
       <section id="problem">
         <div className="w">
-          <div className="stag">— {t("nav-tech").toUpperCase()}</div>
-          <h2 className="st">{t("prob-title")}</h2>
+          <h2 className="st" dangerouslySetInnerHTML={{ __html: t("prob-title") }} />
           <p className="problem-text">{t("prob-text")}</p>
           <p className="problem-text">{t("prob-text2")}</p>
           <div className="prob-grid">
