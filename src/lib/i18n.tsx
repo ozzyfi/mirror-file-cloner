@@ -117,6 +117,57 @@ export const T: Dict = {
   "ph-company": { tr: "Şirket adı", en: "Company name" },
   "ph-phone": { tr: "+90 5xx xxx xx xx", en: "+1 555 000 0000" },
   "ph-email": { tr: "email@sirket.com", en: "email@company.com" },
+
+  // Problem
+  "prob-title": { tr: "Tecrübeli teknisyen gider, bilgi de gider.", en: "Experts leave. Knowledge leaves too." },
+  "prob-text": { tr: "Tecrübeli teknisyenler cevabı çoğu zaman dokümanda aramaz. Sesi, titreşimi, hata kodunu, ekipmanın geçmişini ve daha önce neyin işe yaradığını bilir.", en: "The best technicians rarely search the manual. They know the sound, vibration, smell, equipment history, and what worked before." },
+  "prob-text2": { tr: "Ama bu bilgi genellikle ERP'de, iş emrinde veya dokümanda yaşamaz. Teknisyen ekipten ayrıldığında kurum aynı arızayı yeniden öğrenmek zorunda kalır.", en: "But this knowledge rarely lives in the ERP or manual. When the expert retires, the company relearns the same fault from scratch." },
+  "prob-c1-h": { tr: "Bilgi dağınık", en: "Knowledge is scattered" },
+  "prob-c1-p": { tr: "Dokümanlar, iş emirleri, WhatsApp mesajları ve teknisyen notları farklı yerlerde kalır.", en: "Documents, work orders, WhatsApp messages, and technician notes live in different places." },
+  "prob-c2-h": { tr: "Kapanışlar eksik", en: "Closures are incomplete" },
+  "prob-c2-p": { tr: "Kök neden, kanıt, yapılan işlem ve sonuç çoğu zaman net kaydedilmez.", en: "Root cause, evidence, action, and outcome are rarely clearly recorded." },
+  "prob-c3-h": { tr: "Teknisyen bilgisi kaybolur", en: "Expert knowledge is lost" },
+  "prob-c3-p": { tr: "Tecrübeli teknisyenin pratik çözümü kurumsal hafızaya dönüşmez.", en: "The experienced technician's practical fix never becomes company memory." },
+  "prob-c4-h": { tr: "Aynı arıza tekrar öğrenilir", en: "Same fault relearned" },
+  "prob-c4-p": { tr: "Benzer arızalar her seferinde sıfırdan araştırılır.", en: "Similar faults are researched from scratch every time." },
+
+  // Capabilities
+  "cap-title": { tr: "Sahada işi bitiren AI akışı.", en: "The AI flow that gets field work done." },
+  "cap-h-1": { tr: "Kaynak Referanslı Teşhis", en: "Sourced Diagnosis" },
+  "cap-p-1": { tr: "Dokümanlar, geçmiş vakalar ve saha kanıtlarından kaynak referanslı öneriler.", en: "Source-referenced suggestions from documents, past cases, and field evidence." },
+  "cap-h-2": { tr: "Kanıt Yakalama", en: "Evidence Capture" },
+  "cap-p-2": { tr: "Fotoğraf, ses, hata kodu ve ölçümler iş kaydına bağlanır.", en: "Photos, audio, error codes, and measurements linked to the job record." },
+  "cap-h-3": { tr: "Akıllı Kapanış", en: "Smart Closure" },
+  "cap-p-3": { tr: "Teknisyen konuşur; ToolA kapanış kaydını yapılandırır.", en: "Technician speaks; ToolA structures the closure record." },
+  "cap-h-4": { tr: "Teknisyen Hafızası", en: "Expert Memory" },
+  "cap-p-4": { tr: "Onaylanan çözümler kurumsal hafızaya eklenir.", en: "Approved solutions added to company memory." },
+  "cap-h-5": { tr: "Offline Çalışma", en: "Offline Operation" },
+  "cap-p-5": { tr: "Saha ve yüksek güvenlikli ortamlarda internet olmadan çalışabilir.", en: "Works without internet in field and high-security environments." },
+  "cap-h-6": { tr: "ERP Entegrasyonu", en: "ERP Integration" },
+  "cap-p-6": { tr: "SAP, Maximo veya mevcut iş emri sistemlerine entegre edilebilir.", en: "Integrates with SAP, Maximo, or existing work order systems." },
+
+  // Security
+  "sec-title": { tr: "Veriniz altyapınızdan asla çıkmaz.", en: "Your data never leaves your infrastructure." },
+  "sec-desc": { tr: "ToolA; veri güvenliği, denetlenebilirlik ve offline çalışma gerektiren saha operasyonları için tasarlanır.", en: "ToolA is built for national grids, government institutions, industrial facilities, and high-security field operations." },
+  "sec-h-1": { tr: "Tam İzole Mimari", en: "Fully Isolated Architecture" },
+  "sec-p-1": { tr: "Air-gapped ağlarda çalışır. Sıfır dış veri iletimi.", en: "Runs on air-gapped networks. Zero external data transmission." },
+  "sec-h-2": { tr: "Kurumsal Güvenlik", en: "Enterprise Security" },
+  "sec-p-2": { tr: "Şifreleme, rol bazlı erişim ve müşteri kontrollü güvenlik seçenekleriyle tasarlanır.", en: "Designed with encryption, role-based access, and customer-controlled security options." },
+  "sec-h-3": { tr: "Kaynak Gösterimi", en: "Source Citations" },
+  "sec-p-3": { tr: "Her yanıt kaynak sayfa, doküman, geçmiş iş veya saha kanıtını referans gösterir.", en: "Every answer references the source page, document, past job, or field evidence." },
+  "sec-h-4": { tr: "Denetlenebilir Hafıza", en: "Auditable Memory" },
+  "sec-p-4": { tr: "Hangi veriden hangi cevap üretildiği ve kimin onayladığı kayıt altında kalır.", en: "Which data produced which answer, and who approved it — all on record." },
+
+  // CTA
+  "cta-title": { tr: "6 haftada gerçek sahada kanıtlayın.", en: "Prove it in the real field in 6 weeks." },
+  "cta-desc": { tr: "Bir ekip, birkaç bakım senaryosu ve kendi dokümanlarınızla ToolA'yı sahada test edin.", en: "Test ToolA in the field with one team, a few maintenance scenarios, and your own documents." },
+  "cta-desc2": { tr: "Pilot sonunda kaynaklı cevap süresi, kapanış kalitesi, tekrar eden arızalar ve gereksiz müdahale riskini birlikte ölçelim.", en: "At pilot's end, let's measure sourced answer time, closure quality, recurring faults, and unnecessary intervention risk together." },
+  "cta-pl-1": { tr: "Teknisyen", en: "Technicians" },
+  "cta-pl-2": { tr: "Bakım Senaryosu", en: "Scenarios" },
+  "cta-pl-3": { tr: "Sayfa Doküman", en: "Pages of Docs" },
+  "cta-pl-4": { tr: "Hafta", en: "Weeks" },
+  "cta-pl-5": { tr: "Pilot Etki Raporu", en: "Pilot Impact Report" },
+  "cta-btn": { tr: "6 Haftalık Pilot Başlat →", en: "Start 6-Week Pilot →" },
 };
 
 interface LangCtx {
