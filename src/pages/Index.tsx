@@ -183,23 +183,58 @@ export default function Index() {
 
       {/* CAPABILITIES */}
       <section id="capabilities">
+        <a id="product" />
         <div className="w">
-          <div className="stag">— CAPABILITIES</div>
-          <h2 className="st">{t("cap-title")}</h2>
+          <h2 className="st" dangerouslySetInnerHTML={{ __html: t("cap-title") }} />
           <div className="cap-grid-3">
-            {[1, 2, 3, 4, 5, 6].map((i) => (
-              <div className="cap-card" key={i}>
-                <div className="cap-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg>
-                </div>
-                <div className="cap-content">
-                  <h3>{t(`cap-h-${i}`)}</h3>
-                  <p>{t(`cap-p-${i}`)}</p>
-                </div>
+            <div className="cap-card">
+              <div className="cap-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E8601C" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+                </svg>
               </div>
-            ))}
+              <div className="cap-content"><h3>{t("cap-h-1")}</h3><p>{t("cap-p-1")}</p></div>
+            </div>
+            <div className="cap-card">
+              <div className="cap-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E8601C" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="13" r="3"/><path d="M9 3v2h6V3"/>
+                </svg>
+              </div>
+              <div className="cap-content"><h3>{t("cap-h-2")}</h3><p>{t("cap-p-2")}</p></div>
+            </div>
+            <div className="cap-card">
+              <div className="cap-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E8601C" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+              </div>
+              <div className="cap-content"><h3>{t("cap-h-3")}</h3><p>{t("cap-p-3")}</p></div>
+            </div>
+            <div className="cap-card">
+              <div className="cap-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E8601C" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+                </svg>
+              </div>
+              <div className="cap-content"><h3>{t("cap-h-4")}</h3><p>{t("cap-p-4")}</p></div>
+            </div>
+            <div className="cap-card">
+              <div className="cap-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E8601C" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M1 1l22 22"/><path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55"/><path d="M5 12.55a10.94 10.94 0 0 1 5.17-2.39"/><path d="M10.71 5.05A16 16 0 0 1 22.58 9"/><path d="M1.42 9a15.91 15.91 0 0 1 4.7-2.88"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/>
+                </svg>
+              </div>
+              <div className="cap-content"><h3>{t("cap-h-5")}</h3><p>{t("cap-p-5")}</p></div>
+            </div>
+            <div className="cap-card">
+              <div className="cap-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E8601C" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/>
+                </svg>
+              </div>
+              <div className="cap-content"><h3>{t("cap-h-6")}</h3><p>{t("cap-p-6")}</p></div>
+            </div>
           </div>
         </div>
       </section>
