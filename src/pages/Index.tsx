@@ -79,7 +79,7 @@ export default function Index() {
               <div className="d">{t("pm-d-3")}</div>
             </div>
           </div>
-          <div className="ecosystem-title">{t("eco-title")}</div>
+          
           <div className="proof-logos">
             <span>İTÜ Çekirdek</span>
             <span>EIT DIGITAL</span>
