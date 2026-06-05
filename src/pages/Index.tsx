@@ -89,6 +89,80 @@ export default function Index() {
         </div>
       </div>
 
+      {/* SOLUTION (DARK) */}
+      <section className="ins" id="solution">
+        <div className="w">
+          <div className="expert-grid">
+            <div>
+              <h2 className="st" dangerouslySetInnerHTML={{ __html: t("sol-title") }} />
+              <p className="sd">{t("sol-desc")}</p>
+              <p className="sd">{t("sol-desc2")}</p>
+              <div className="sol-result">
+                <h4>{t("sol-highlight")}</h4>
+              </div>
+            </div>
+            <div className="memory-card">
+              <h4>{t("mem-card-title")}</h4>
+              {[
+                ["mem-l-eq", "mem-v-eq"],
+                ["mem-l-sym", "mem-v-sym"],
+                ["mem-l-ev", "mem-v-ev"],
+                ["mem-l-est", "mem-v-est"],
+                ["mem-l-rc", "mem-v-rc"],
+                ["mem-l-act", "mem-v-act"],
+                ["mem-l-res", "mem-v-res"],
+                ["mem-l-mem", "mem-v-mem"],
+                ["mem-l-src", "mem-v-src"],
+              ].map(([lk, vk]) => (
+                <div key={lk} className="memory-row">
+                  <span className="memory-label">{t(lk)}</span>
+                  <span className={`memory-val ${vk === "mem-v-rc" ? "red" : ""}`}>{t(vk)}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+          <h3 className="st" style={{ fontSize: "clamp(1.5rem,2.8vw,2.2rem)", marginTop: "3rem", color: "#F7F5F0" }}
+            dangerouslySetInnerHTML={{ __html: t("mem-title") }} />
+          <p className="sd">{t("mem-sub")}</p>
+          <div className="sol-grid-3">
+            <div className="sol-card left">
+              <h4>{t("sol-h-1")}</h4>
+              <ul>
+                <li>{t("sol-li-1")}</li><li>{t("sol-li-2")}</li><li>{t("sol-li-3")}</li><li>{t("sol-li-4")}</li>
+              </ul>
+            </div>
+            <div className="sol-card left">
+              <h4>{t("sol-h-2")}</h4>
+              <ul>
+                <li>{t("sol-li-5")}</li><li>{t("sol-li-6")}</li><li>{t("sol-li-7")}</li><li>{t("sol-li-8")}</li>
+              </ul>
+            </div>
+            <div className="sol-card right">
+              <h4>{t("sol-h-3")}</h4>
+              <ul>
+                <li>{t("sol-li-10")}</li><li>{t("sol-li-11")}</li><li>{t("sol-li-13")}</li><li>{t("sol-li-14")}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* HOW IT WORKS */}
+      <section id="how">
+        <div className="w">
+          <h2 className="st" dangerouslySetInnerHTML={{ __html: t("how-title") }} />
+          <div className="how-grid">
+            {[1, 2, 3, 4, 5].map((i) => (
+              <div className="how-step" key={i}>
+                <div className="how-num">0{i}</div>
+                <h3>{t(`how-h-${i}`)}</h3>
+                <p>{t(`how-p-${i}`)}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </>
   );
