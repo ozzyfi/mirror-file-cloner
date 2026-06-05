@@ -119,7 +119,7 @@ export const T: Dict = {
   "ph-email": { tr: "email@sirket.com", en: "email@company.com" },
 
   // Problem
-  "prob-title": { tr: "Tecrübeli teknisyen gider, bilgi de gider.", en: "Experts leave. Knowledge leaves too." },
+  "prob-title": { tr: "Tecrübeli teknisyen gider, <em>bilgi de gider.</em>", en: "Experts leave. <em>Knowledge leaves too.</em>" },
   "prob-text": { tr: "Tecrübeli teknisyenler cevabı çoğu zaman dokümanda aramaz. Sesi, titreşimi, hata kodunu, ekipmanın geçmişini ve daha önce neyin işe yaradığını bilir.", en: "The best technicians rarely search the manual. They know the sound, vibration, smell, equipment history, and what worked before." },
   "prob-text2": { tr: "Ama bu bilgi genellikle ERP'de, iş emrinde veya dokümanda yaşamaz. Teknisyen ekipten ayrıldığında kurum aynı arızayı yeniden öğrenmek zorunda kalır.", en: "But this knowledge rarely lives in the ERP or manual. When the expert retires, the company relearns the same fault from scratch." },
   "prob-c1-h": { tr: "Bilgi dağınık", en: "Knowledge is scattered" },
@@ -132,7 +132,7 @@ export const T: Dict = {
   "prob-c4-p": { tr: "Benzer arızalar her seferinde sıfırdan araştırılır.", en: "Similar faults are researched from scratch every time." },
 
   // Capabilities
-  "cap-title": { tr: "Sahada işi bitiren AI akışı.", en: "The AI flow that gets field work done." },
+  "cap-title": { tr: "Sahada işi bitiren <em>AI akışı.</em>", en: "The AI flow that <em>gets field work done.</em>" },
   "cap-h-1": { tr: "Kaynak Referanslı Teşhis", en: "Sourced Diagnosis" },
   "cap-p-1": { tr: "Dokümanlar, geçmiş vakalar ve saha kanıtlarından kaynak referanslı öneriler.", en: "Source-referenced suggestions from documents, past cases, and field evidence." },
   "cap-h-2": { tr: "Kanıt Yakalama", en: "Evidence Capture" },
@@ -147,7 +147,7 @@ export const T: Dict = {
   "cap-p-6": { tr: "SAP, Maximo veya mevcut iş emri sistemlerine entegre edilebilir.", en: "Integrates with SAP, Maximo, or existing work order systems." },
 
   // Security
-  "sec-title": { tr: "Veriniz altyapınızdan asla çıkmaz.", en: "Your data never leaves your infrastructure." },
+  "sec-title": { tr: "Veriniz altyapınızdan <em>asla çıkmaz.</em>", en: "Your data <em>never leaves</em> your infrastructure." },
   "sec-desc": { tr: "ToolA; veri güvenliği, denetlenebilirlik ve offline çalışma gerektiren saha operasyonları için tasarlanır.", en: "ToolA is built for national grids, government institutions, industrial facilities, and high-security field operations." },
   "sec-h-1": { tr: "Tam İzole Mimari", en: "Fully Isolated Architecture" },
   "sec-p-1": { tr: "Air-gapped ağlarda çalışır. Sıfır dış veri iletimi.", en: "Runs on air-gapped networks. Zero external data transmission." },
@@ -159,7 +159,7 @@ export const T: Dict = {
   "sec-p-4": { tr: "Hangi veriden hangi cevap üretildiği ve kimin onayladığı kayıt altında kalır.", en: "Which data produced which answer, and who approved it — all on record." },
 
   // CTA
-  "cta-title": { tr: "6 haftada gerçek sahada kanıtlayın.", en: "Prove it in the real field in 6 weeks." },
+  "cta-title": { tr: "6 haftada gerçek sahada <em>kanıtlayın.</em>", en: "Prove it in the real field <em>in 6 weeks.</em>" },
   "cta-desc": { tr: "Bir ekip, birkaç bakım senaryosu ve kendi dokümanlarınızla ToolA'yı sahada test edin.", en: "Test ToolA in the field with one team, a few maintenance scenarios, and your own documents." },
   "cta-desc2": { tr: "Pilot sonunda kaynaklı cevap süresi, kapanış kalitesi, tekrar eden arızalar ve gereksiz müdahale riskini birlikte ölçelim.", en: "At pilot's end, let's measure sourced answer time, closure quality, recurring faults, and unnecessary intervention risk together." },
   "cta-pl-1": { tr: "Teknisyen", en: "Technicians" },
