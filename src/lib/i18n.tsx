@@ -119,7 +119,7 @@ export const T: Dict = {
   "ph-email": { tr: "email@sirket.com", en: "email@company.com" },
 
   // Problem
-  "prob-title": { tr: "Tecrübeli teknisyen gider, bilgi de gider.", en: "Experts leave. Knowledge leaves too." },
+  "prob-title": { tr: "Tecrübeli teknisyen gider, <em>bilgi de gider.</em>", en: "Experts leave. <em>Knowledge leaves too.</em>" },
   "prob-text": { tr: "Tecrübeli teknisyenler cevabı çoğu zaman dokümanda aramaz. Sesi, titreşimi, hata kodunu, ekipmanın geçmişini ve daha önce neyin işe yaradığını bilir.", en: "The best technicians rarely search the manual. They know the sound, vibration, smell, equipment history, and what worked before." },
   "prob-text2": { tr: "Ama bu bilgi genellikle ERP'de, iş emrinde veya dokümanda yaşamaz. Teknisyen ekipten ayrıldığında kurum aynı arızayı yeniden öğrenmek zorunda kalır.", en: "But this knowledge rarely lives in the ERP or manual. When the expert retires, the company relearns the same fault from scratch." },
   "prob-c1-h": { tr: "Bilgi dağınık", en: "Knowledge is scattered" },
