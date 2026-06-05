@@ -89,8 +89,27 @@ export default function Index() {
         </div>
       </div>
 
+      {/* PROBLEM */}
+      <section id="problem">
+        <div className="w">
+          <div className="stag">— {t("nav-tech").toUpperCase()}</div>
+          <h2 className="st">{t("prob-title")}</h2>
+          <p className="problem-text">{t("prob-text")}</p>
+          <p className="problem-text">{t("prob-text2")}</p>
+          <div className="prob-grid">
+            {[1, 2, 3, 4].map((i) => (
+              <div className="prob-card" key={i}>
+                <h3>{t(`prob-c${i}-h`)}</h3>
+                <p>{t(`prob-c${i}-p`)}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* SOLUTION (DARK) */}
       <section className="ins" id="solution">
+
         <div className="w">
           <div className="expert-grid">
             <div>
