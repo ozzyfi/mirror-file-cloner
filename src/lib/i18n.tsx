@@ -132,7 +132,7 @@ export const T: Dict = {
   "prob-c4-p": { tr: "Benzer arızalar her seferinde sıfırdan araştırılır.", en: "Similar faults are researched from scratch every time." },
 
   // Capabilities
-  "cap-title": { tr: "Sahada işi bitiren AI akışı.", en: "The AI flow that gets field work done." },
+  "cap-title": { tr: "Sahada işi bitiren <em>AI akışı.</em>", en: "The AI flow that <em>gets field work done.</em>" },
   "cap-h-1": { tr: "Kaynak Referanslı Teşhis", en: "Sourced Diagnosis" },
   "cap-p-1": { tr: "Dokümanlar, geçmiş vakalar ve saha kanıtlarından kaynak referanslı öneriler.", en: "Source-referenced suggestions from documents, past cases, and field evidence." },
   "cap-h-2": { tr: "Kanıt Yakalama", en: "Evidence Capture" },
